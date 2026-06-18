@@ -42,10 +42,7 @@ header{position:sticky;top:14px;z-index:50;margin:14px auto 0;max-width:1120px;p
   border:1px solid var(--glass-brd);box-shadow:var(--shadow)}
 .brand{display:flex;align-items:center;gap:10px;font-family:var(--disp);font-weight:700;
   font-size:17px;letter-spacing:-.01em;color:var(--ink);text-decoration:none}
-.brand .mark{width:24px;height:24px;display:grid;grid-template-columns:1fr 1fr;
-  grid-template-rows:1fr 1fr;gap:2.5px}
-.brand .mark i{background:#cfd4dc;border-radius:2px}
-.brand .mark i:nth-child(1){background:var(--acc)}
+.brand-logo{width:auto;height:18px;display:block;border-radius:4px}
 .nav-links{display:flex;align-items:center;gap:8px}
 .nav-links a{color:var(--ink-dim);text-decoration:none;font-size:14.5px;font-weight:500;
   padding:8px 14px;border-radius:10px;transition:all .2s}
@@ -234,8 +231,8 @@ a.card{text-decoration:none;color:inherit;display:block}
 /* ===== 文档页（教程浏览） ===== */
 .doc-app{display:grid;grid-template-columns:248px 1fr;gap:26px;padding:96px 0 20px;align-items:start}
 @media(max-width:860px){.doc-app{grid-template-columns:1fr;padding-top:88px}}
-.doc-side{padding:30px 14px 18px;position:sticky;top:88px;max-height:calc(100vh - 110px);overflow-y:auto}
-@media(max-width:860px){.doc-side{position:static;max-height:340px}}
+aside.doc-side{padding:30px 14px 18px;position:sticky;top:88px;max-height:calc(100vh - 110px);overflow-y:auto}
+@media(max-width:860px){aside.doc-side{position:static;max-height:340px}}
 .doc-group{margin-bottom:14px}
 .doc-group:first-child{margin-top:0}
 .doc-group:first-child .doc-group-t{padding-top:0}
@@ -303,6 +300,7 @@ a.card{text-decoration:none;color:inherit;display:block}
   background:radial-gradient(ellipse 110% 80% at 50% 0%,#fbfcfe,#E9ebF0 72%);
   transition:opacity .6s ease}
 .intro-overlay.hide{opacity:0;pointer-events:none}
+.intro-logo{width:auto;height:48px;display:block;border-radius:8px}
 .intro-brand{font-family:var(--disp);font-weight:800;font-size:21px;letter-spacing:-.01em;color:#16171a}
 .intro-brand span{background:linear-gradient(120deg,#0071E3,#7c5cff 60%,#00b8a3);
   -webkit-background-clip:text;background-clip:text;color:transparent}
@@ -362,11 +360,9 @@ a.card{text-decoration:none;color:inherit;display:block}
 
 /* 格式标签：点按回弹 */
 .fmt:active{transform:translateY(0) scale(.94)}
-/* 导航 logo 方块：悬停时第一格点亮扩散 */
-.brand:hover .mark i{background:#aeb6c2}
-.brand:hover .mark i:nth-child(1){background:var(--acc)}
-.brand:hover .mark i:nth-child(4){background:var(--acc);transition-delay:.05s}
-.brand .mark i{transition:background .25s}
+/* 导航 logo：悬停轻微放大 */
+.brand:hover .brand-logo{transform:scale(1.06)}
+.brand-logo{transition:transform .25s}
 /* 主按钮：箭头轻微下移提示 */
 .btn-primary:hover{letter-spacing:.005em}
 /* 进入视口淡入（滚动触发） */
@@ -374,3 +370,42 @@ a.card{text-decoration:none;color:inherit;display:block}
 .inview.show{opacity:1;transform:none;transition:opacity .7s cubic-bezier(.2,.7,.2,1),
   transform .7s cubic-bezier(.2,.7,.2,1)}
 @media(prefers-reduced-motion:reduce){.inview{opacity:1;transform:none}}
+
+/* ===== 四语 i18n ===== */
+/* 非中文首屏：翻译完成前隐藏可翻译内容，避免中文一闪（中文不加此类，立即可见） */
+html.i18n-pending main,
+html.i18n-pending header .nav-links a[data-i18n]{visibility:hidden}
+/* 日 / 韩字体（中 / 英用默认 Noto Sans SC + Manrope） */
+html[lang="ja"] body{--sans:'Noto Sans JP','Manrope',-apple-system,system-ui,sans-serif;--disp:'Manrope','Noto Sans JP',-apple-system,system-ui,sans-serif}
+html[lang="ko"] body{--sans:'Noto Sans KR','Manrope',-apple-system,system-ui,sans-serif;--disp:'Manrope','Noto Sans KR',-apple-system,system-ui,sans-serif}
+
+/* 语言切换器（下拉式，注入到 .nav-links 末尾；融入导航：与 .nav-links a 同构的扁平文字风） */
+.lang-switcher{position:relative;margin-left:2px}
+.lang-btn{display:flex;align-items:center;gap:7px;cursor:pointer;
+  padding:8px 12px;border:0;border-radius:10px;
+  background:transparent;color:var(--ink-dim);
+  font-family:var(--disp);font-size:14.5px;font-weight:500;line-height:1;
+  transition:all .2s}
+.lang-btn:hover{color:var(--ink);background:rgba(0,0,0,.04)}
+.lang-btn .lang-flag{font-size:13px;line-height:1}
+.lang-caret{color:var(--ink-faint);transition:transform .2s}
+.lang-switcher.open .lang-caret{transform:rotate(180deg)}
+.lang-menu{position:absolute;top:calc(100% + 8px);right:0;min-width:158px;
+  padding:5px;border:1px solid var(--hair);border-radius:12px;
+  background:var(--glass-strong);backdrop-filter:saturate(160%) blur(16px);
+  box-shadow:var(--shadow);opacity:0;visibility:hidden;transform:translateY(-8px);
+  transition:opacity .2s,transform .2s,visibility .2s;z-index:1000}
+.lang-switcher.open .lang-menu{opacity:1;visibility:visible;transform:translateY(0)}
+.lang-item{display:flex;align-items:center;gap:11px;width:100%;cursor:pointer;
+  padding:9px 12px;border:0;border-radius:8px;background:transparent;text-align:left;
+  color:var(--ink-dim);font-family:var(--disp);font-size:13.5px;font-weight:500;
+  transition:background .16s,color .16s}
+.lang-item .lang-flag{font-size:15px;line-height:1}
+.lang-item:hover{background:rgba(0,113,227,.08);color:var(--ink)}
+.lang-item.active{color:var(--acc);font-weight:700;background:rgba(0,113,227,.06)}
+@media(max-width:720px){.lang-switcher{margin-left:6px}.lang-btn{padding:6px 9px}.lang-btn .lang-name{display:none}}
+
+/* 文档"暂无翻译"回退提示条 */
+.doc-fallback-note{display:flex;align-items:center;gap:8px;margin:0 0 22px;
+  padding:11px 15px;border-radius:12px;font-size:13.5px;line-height:1.5;
+  color:#92560a;background:rgba(234,179,8,.12);border:1px solid rgba(234,179,8,.32)}

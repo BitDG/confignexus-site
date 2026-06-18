@@ -1,0 +1,7 @@
+# Learnings（跨任务经验）
+
+- [2026-06-10 / 官网文档独立化] 站点文档已**独立**，不再依赖 configNexus-1：教程 md 源是站内 `content/md/<lang>`（App 上游的可编辑快照），媒体在 `docs/Res-<lang>`（已提交）。`build-docs.mjs` 只读站内、零机器专属路径。要从 App 拉最新内容跑 `node sync-from-app.mjs`（仓库内唯一引用 App 路径处，单向 App→site，默认拒覆盖未提交改动，需 --force）。**不要再把 `E:/configNexus-1` 路径写回 build-docs.mjs**。
+- [2026-06-10 / 官网文档独立化] `content/md` 是上游快照不是真源，结构真源是 `docs-manifest.js`；不要反向手改 `content/md` 或 `skills/.../references`（会被 sync 覆盖）。Skill 包在 `skills/confignexus-component-dev/`，装机用 `node skills/install.mjs`（复制非软链）。
+- [2026-06-18 / 创意工坊组件仓库] 本机 Windows Git Bash 里用 `node -e '...\\...'` 传含**反斜杠**的脚本，反斜杠会被这层 shell 塌掉（`\\`→`\`，JS 再把 `\c`/`\a` 当转义吃掉），导致字符串匹配静默失败。凡是要处理反斜杠路径或中文的一次性脚本，**写成 `.mjs` 文件再 `node 跑`**（Write 工具不经 shell 转义），跑完即删。
+- [2026-06-18 / 创意工坊组件仓库] 从 `configNexus-1/app` 抽组件到独立仓库：组件靠 `app/package.json` 的 npm workspaces + `app/_shared`（`@shared` alias）+ 共享 `node_modules` 才能构建，**必须保留 `_shared` 与扁平同级布局**且 workspaces 要列全（原仅列 7/15）。复制用 `robocopy <src> <dst> /E /XD node_modules dist`。`app/*/.env.local` 多是占位 key，但公开前要 gitignore 并扫私有绝对路径（docs/skill 里残留过形如 `X:\…\app` 的本机绝对路径，`scripts/clean-component-doc.mjs` 已加规则把它脱敏成 `path/to/app`，sync 时自动清）。
+- [2026-06-18 / 创意工坊组件仓库] 官网新页 `workshop.html` 列创意工坊组件，数据是 `node scripts/gen-workshop-data.mjs --src=<workshop>/components` 生成的 `workshop-components.js`（`window.WORKSHOP_COMPONENTS`，组件名取 metadata 四语 displayNames，icon 是 lucide 名→workshop.js 里映射 emoji）。生成脚本一次性、不入 build、不写死私有路径，保持官网构建独立。组件源在独立仓库 `confignexus-workshop`（本机 `E:\configNexus-workshop`，Apache-2.0，尚未 push）。

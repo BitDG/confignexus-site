@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<title data-i18n="ws.title">创意工坊 · ConfigNexus</title>
+<meta name="description" data-i18n="ws.desc" content="ConfigNexus 创意工坊组件库：15 个开源示例组件 + 组件/插件开发文档 + AI 技能包，源码托管在 GitHub，照着就能给配置大师做组件。">
+<script src="i18n.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<div class="bg"><div class="grid"></div></div>
+
+<header class="reveal d1">
+  <div class="nav">
+    <a class="brand" href="index.html"><img class="brand-logo" src="assets/logo.png" alt="ConfigNexus 标志">ConfigNexus</a>
+    <nav class="nav-links">
+      <a href="features.html" data-i18n="nav.features">功能</a>
+      <a href="workshop.html" class="active" data-i18n="nav.workshop">创意工坊</a>
+      <a href="download.html" data-i18n="nav.download">下载</a>
+      <a href="docs.html" data-i18n="nav.docs">文档</a>
+      <a class="nav-cta" href="https://store.steampowered.com/app/4400360/ConfigNexus___AI/" target="_blank" rel="noopener">Steam</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="pagehead">
+    <div class="wrap">
+      <div class="tag reveal d2" data-i18n="ws.headTag">创意工坊 · 开源组件</div>
+      <h1 class="reveal d2" data-i18n="ws.headH">现成的组件，<br>照着就能做你自己的</h1>
+      <p class="reveal d3" data-i18n="ws.headP">下面是 ConfigNexus 创意工坊的开源示例组件。全部源码 + 组件/插件开发文档 + AI 技能包都托管在 GitHub，克隆下来就能跑、能改、能当模板。</p>
+      <div class="cta-row reveal d4">
+        <a class="btn btn-primary" id="ws-github" href="https://github.com/digua12331/confignexus-workshop" target="_blank" rel="noopener" data-i18n="ws.ghBtn">↗ 在 GitHub 上查看</a>
+        <a class="btn btn-ghost" href="docs.html" data-i18n="ws.docsBtn">查看开发文档</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:30px">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="tag" data-i18n="ws.gridTag">组件清单</div>
+        <h2 data-i18n="ws.gridH">15 个开源示例组件</h2>
+      </div>
+      <div class="cards" id="ws-cards">
+        <!-- 由 workshop.js 从 workshop-components.js 渲染 -->
+      </div>
+      <p class="ws-empty" id="ws-empty" style="display:none;text-align:center;opacity:.6" data-i18n="ws.empty">组件清单加载中…</p>
+    </div>
+  </section>
+
+  <section class="endwrap">
+    <div class="wrap">
+      <div class="endcta">
+        <h2 data-i18n="ws.endH">想做自己的组件？</h2>
+        <p data-i18n="ws.endP">克隆仓库，装上 AI 技能包，从模板起步。</p>
+        <a class="btn btn-primary" href="https://github.com/digua12331/confignexus-workshop" target="_blank" rel="noopener" data-i18n="ws.ghBtn">↗ 在 GitHub 上查看</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div class="c">© 2026 ConfigNexus</div>
+    <div class="lk">
+      <a href="features.html" data-i18n="nav.features">功能</a>
+      <a href="workshop.html" data-i18n="nav.workshop">创意工坊</a>
+      <a href="download.html" data-i18n="nav.download">下载</a>
+      <a href="docs.html" data-i18n="nav.docs">文档</a>
+      <a href="https://store.steampowered.com/app/4400360/ConfigNexus___AI/" target="_blank" rel="noopener">Steam</a>
+    </div>
+  </div>
+</footer>
+<script src="workshop-components.js"></script>
+<script src="workshop.js"></script>
+<script src="site.js"></script>
+</body>
+</html>

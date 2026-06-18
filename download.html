@@ -3,8 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>下载 · ConfigNexus</title>
-<meta name="description" content="下载 ConfigNexus 桌面端配置管理工具（Windows）。">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<title data-i18n="dl.title">下载 · ConfigNexus</title>
+<meta name="description" data-i18n="dl.desc" content="下载 ConfigNexus 桌面端配置管理工具（Windows）。">
+<script src="i18n.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -17,11 +19,12 @@
 
 <header class="reveal d1">
   <div class="nav">
-    <a class="brand" href="index.html"><span class="mark"><i></i><i></i><i></i><i></i></span>ConfigNexus</a>
+    <a class="brand" href="index.html"><img class="brand-logo" src="assets/logo.png" alt="ConfigNexus 标志">ConfigNexus</a>
     <nav class="nav-links">
-      <a href="features.html">功能</a>
-      <a href="download.html" class="active">下载</a>
-      <a href="docs.html">文档</a>
+      <a href="features.html" data-i18n="nav.features">功能</a>
+      <a href="workshop.html" data-i18n="nav.workshop">创意工坊</a>
+      <a href="download.html" class="active" data-i18n="nav.download">下载</a>
+      <a href="docs.html" data-i18n="nav.docs">文档</a>
       <a class="nav-cta" href="https://store.steampowered.com/app/4400360/ConfigNexus___AI/" target="_blank" rel="noopener">Steam</a>
     </nav>
   </div>
@@ -30,23 +33,23 @@
 <main>
   <section class="pagehead">
     <div class="wrap">
-      <div class="tag reveal d2">下载</div>
-      <h1 class="reveal d2">获取 ConfigNexus</h1>
-      <p class="reveal d3">桌面端配置管理工具，当前提供 Windows 版本。</p>
+      <div class="tag reveal d2" data-i18n="dl.headTag">下载</div>
+      <h1 class="reveal d2" data-i18n="dl.headH">获取 ConfigNexus</h1>
+      <p class="reveal d3" data-i18n="dl.headP">桌面端配置管理工具，当前提供 Windows 版本。</p>
     </div>
   </section>
 
   <section class="wrap">
     <div class="dl-hero">
       <div class="dl-card glasscard reveal d3">
-        <div class="ver">最新版本 · v1.0.0</div>
+        <div class="ver" data-i18n="dl.ver">最新版本 · v1.0.0</div>
         <h2>ConfigNexus for Windows</h2>
-        <a class="btn btn-disabled" aria-disabled="true">即将提供下载</a>
-        <p class="note">安装包正在准备中，上线后这里会换成 Windows 安装程序（.exe）的下载按钮。可以先在 GitHub 关注更新。</p>
+        <a class="btn btn-disabled" aria-disabled="true" data-i18n="dl.btn">即将提供下载</a>
+        <p class="note" data-i18n="dl.note">安装包正在准备中，上线后这里会换成 Windows 安装程序（.exe）的下载按钮。可以先在 GitHub 关注更新。</p>
         <div class="dl-meta">
-          <div><div class="k">系统</div><div class="v">Windows 10 / 11</div></div>
-          <div><div class="k">架构</div><div class="v">64 位</div></div>
-          <div><div class="k">安装方式</div><div class="v">NSIS 安装程序</div></div>
+          <div><div class="k" data-i18n="dl.k1">系统</div><div class="v" data-i18n="dl.v1">Windows 10 / 11</div></div>
+          <div><div class="k" data-i18n="dl.k2">架构</div><div class="v" data-i18n="dl.v2">64 位</div></div>
+          <div><div class="k" data-i18n="dl.k3">安装方式</div><div class="v" data-i18n="dl.v3">NSIS 安装程序</div></div>
         </div>
       </div>
     </div>
@@ -54,18 +57,18 @@
     <div class="steps">
       <div class="step glasscard reveal d4">
         <div class="n">1</div>
-        <h4>下载安装包</h4>
-        <p>点击上方按钮下载 Windows 安装程序（上线后提供）。</p>
+        <h4 data-i18n="dl.s1h">下载安装包</h4>
+        <p data-i18n="dl.s1p">点击上方按钮下载 Windows 安装程序（上线后提供）。</p>
       </div>
       <div class="step glasscard reveal d4">
         <div class="n">2</div>
-        <h4>运行安装</h4>
-        <p>双击安装程序，按提示完成安装。若系统提示来源未知，选择仍要运行即可。</p>
+        <h4 data-i18n="dl.s2h">运行安装</h4>
+        <p data-i18n="dl.s2p">双击安装程序，按提示完成安装。若系统提示来源未知，选择仍要运行即可。</p>
       </div>
       <div class="step glasscard reveal d5">
         <div class="n">3</div>
-        <h4>开始使用</h4>
-        <p>打开 ConfigNexus，导入 Excel 或新建配置表，参考文档快速上手。</p>
+        <h4 data-i18n="dl.s3h">开始使用</h4>
+        <p data-i18n="dl.s3p">打开 ConfigNexus，导入 Excel 或新建配置表，参考文档快速上手。</p>
       </div>
     </div>
   </section>
@@ -73,9 +76,9 @@
   <section class="endwrap">
     <div class="wrap">
       <div class="endcta">
-        <h2>不知道从哪开始？</h2>
-        <p>查看快速上手文档，几分钟跑通第一张配置表。</p>
-        <a class="btn btn-primary" href="docs.html">查看文档 →</a>
+        <h2 data-i18n="dl.endH">不知道从哪开始？</h2>
+        <p data-i18n="dl.endP">查看快速上手文档，几分钟跑通第一张配置表。</p>
+        <a class="btn btn-primary" href="docs.html" data-i18n="dl.endBtn">查看文档 →</a>
       </div>
     </div>
   </section>
@@ -85,9 +88,10 @@
   <div class="wrap foot">
     <div class="c">© 2026 ConfigNexus</div>
     <div class="lk">
-      <a href="features.html">功能</a>
-      <a href="download.html">下载</a>
-      <a href="docs.html">文档</a>
+      <a href="features.html" data-i18n="nav.features">功能</a>
+      <a href="workshop.html" data-i18n="nav.workshop">创意工坊</a>
+      <a href="download.html" data-i18n="nav.download">下载</a>
+      <a href="docs.html" data-i18n="nav.docs">文档</a>
       <a href="https://store.steampowered.com/app/4400360/ConfigNexus___AI/" target="_blank" rel="noopener">Steam</a>
     </div>
   </div>

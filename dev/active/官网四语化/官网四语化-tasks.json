@@ -1,0 +1,69 @@
+{
+  "task": "官网四语化",
+  "steps": [
+    {
+      "id": 1,
+      "title": "建 docs-manifest.js",
+      "verify": "console 打印 DOC_MANIFEST.length===34 且 DOC_CATS 含 7 分类四语标题",
+      "status": "todo",
+      "read_files": ["dev/active/官网四语化/官网四语化-context.md"],
+      "write_files": ["docs-manifest.js"]
+    },
+    {
+      "id": 2,
+      "title": "重写 build-docs.mjs + 生成 docs-data.js + 复制 Res + manifest 校验",
+      "verify": "node build-docs.mjs 退出0，打印四语篇数，docs-data.js 含 DOCS.zh/en/ja/ko，无失配 warn",
+      "status": "todo",
+      "read_files": ["docs-manifest.js", "build-docs.mjs"],
+      "write_files": ["build-docs.mjs", "docs-data.js", "docs/Res-en/**", "docs/Res-ja/**", "docs/Res-ko/**"]
+    },
+    {
+      "id": 3,
+      "title": "建 i18n.js",
+      "verify": "四页右上角切换器；切换 reload 后 html lang 与文案变；首访按浏览器语言命中",
+      "status": "todo",
+      "read_files": ["index.html", "features.html", "download.html", "docs.html"],
+      "write_files": ["i18n.js"]
+    },
+    {
+      "id": 4,
+      "title": "营销页打标 + 引入 i18n.js + features 深链改稳定 ID",
+      "verify": "三页逐语言切换无残留中文；英文点功能卡片正确定位",
+      "status": "todo",
+      "read_files": ["index.html", "features.html", "download.html", "docs-manifest.js"],
+      "write_files": ["index.html", "features.html", "download.html"]
+    },
+    {
+      "id": 5,
+      "title": "改造 docs.js + docs.html 引入",
+      "verify": "英文已译显英文、未译显提示条+中文且 lang=zh-CN；旧深链可开；非法 hash 不白屏",
+      "status": "todo",
+      "read_files": ["docs.js", "docs.html", "docs-manifest.js"],
+      "write_files": ["docs.js", "docs.html"]
+    },
+    {
+      "id": 6,
+      "title": "site.css 加样式",
+      "verify": "非中文首屏不闪中文；切换器/提示条样式协调",
+      "status": "todo",
+      "read_files": ["site.css"],
+      "write_files": ["site.css"]
+    },
+    {
+      "id": 7,
+      "title": "intro.js 文案四语化",
+      "verify": "代码层确认按 window.CN_LANG 取 MUSINGS/REVEAL",
+      "status": "todo",
+      "read_files": ["intro.js"],
+      "write_files": ["intro.js"]
+    },
+    {
+      "id": 8,
+      "title": "全量浏览器验收 + 越界检查",
+      "verify": "验收矩阵跑通；git diff 全在白名单内",
+      "status": "todo",
+      "read_files": ["*"],
+      "write_files": []
+    }
+  ]
+}

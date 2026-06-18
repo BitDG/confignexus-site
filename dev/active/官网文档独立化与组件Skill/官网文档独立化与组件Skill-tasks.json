@@ -1,0 +1,61 @@
+{
+  "task": "官网文档独立化与组件Skill",
+  "steps": [
+    {
+      "id": 1,
+      "title": "vendor md 进站点 content/md",
+      "verify": "content/md/zh 34 篇(不含CHANGELOG)，en/ja/ko 各 20",
+      "status": "todo",
+      "read_files": ["E:/configNexus-1/src/renderer/welcome/md/**"],
+      "write_files": ["content/md/**"]
+    },
+    {
+      "id": 2,
+      "title": "改 build-docs.mjs 去硬编码+读本地+删外拷",
+      "verify": "grep 不到 configNexus-1/E:/；改名 App 后 build 成功，篇数 34/20/20/20",
+      "status": "todo",
+      "read_files": ["build-docs.mjs", "docs-manifest.js", "docs.js"],
+      "write_files": ["build-docs.mjs"]
+    },
+    {
+      "id": 3,
+      "title": "build 校验前置可阻断+媒体引用校验",
+      "verify": "坏 manifest 引用→非零退出且产物未改；修好后退出0",
+      "status": "todo",
+      "read_files": ["build-docs.mjs", "docs.js", "docs-manifest.js", "content/md/**"],
+      "write_files": ["build-docs.mjs"]
+    },
+    {
+      "id": 4,
+      "title": "建 sync-from-app.mjs 一键同步",
+      "verify": "App在场跑通 git diff 仅预期目录；缺上游→非零退出未写入",
+      "status": "todo",
+      "read_files": ["build-docs.mjs"],
+      "write_files": ["sync-from-app.mjs"]
+    },
+    {
+      "id": 5,
+      "title": "打包 skill：references+清洗链接+SKILL.md",
+      "verify": "frontmatter合法；13篇齐；grep 不到 ../../ 失效链接",
+      "status": "todo",
+      "read_files": ["E:/configNexus-1/app/docs/组件开发方案/**", "E:/configNexus-1/app/package.json"],
+      "write_files": ["skills/confignexus-component-dev/**"]
+    },
+    {
+      "id": 6,
+      "title": "写 install 脚本 + README 说明",
+      "verify": "跑安装后 skill 落到目标 skills 目录；新会话能发现",
+      "status": "todo",
+      "read_files": ["skills/confignexus-component-dev/SKILL.md"],
+      "write_files": ["skills/install.mjs", "skills/README.md"]
+    },
+    {
+      "id": 7,
+      "title": "记缺图 issue 到 dev/issues.md",
+      "verify": "dev/issues.md 末尾出现该单行条目",
+      "status": "todo",
+      "read_files": [],
+      "write_files": ["dev/issues.md"]
+    }
+  ]
+}

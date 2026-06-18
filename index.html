@@ -3,8 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ConfigNexus · 像电子表格一样掌控每一张配置表</title>
-<meta name="description" content="ConfigNexus —— 桌面端配置管理工具。表格化编辑、Excel 双向导入导出、本地 AI 助手、多格式导出（JSON / CSV / YAML / C# / Protobuf …）。">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<title data-i18n="idx.title">ConfigNexus · 像电子表格一样掌控每一张配置表</title>
+<meta name="description" data-i18n="idx.desc" content="ConfigNexus —— 桌面端配置管理工具。表格化编辑、Excel 双向导入导出、本地 AI 助手、多格式导出（JSON / CSV / YAML / C# / Protobuf …）。">
+<script src="i18n.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -17,11 +19,12 @@
 
 <header class="reveal d1">
   <div class="nav">
-    <a class="brand" href="index.html"><span class="mark"><i></i><i></i><i></i><i></i></span>ConfigNexus</a>
+    <a class="brand" href="index.html"><img class="brand-logo" src="assets/logo.png" alt="ConfigNexus 标志">ConfigNexus</a>
     <nav class="nav-links">
-      <a href="features.html">功能</a>
-      <a href="download.html">下载</a>
-      <a href="docs.html">文档</a>
+      <a href="features.html" data-i18n="nav.features">功能</a>
+      <a href="workshop.html" data-i18n="nav.workshop">创意工坊</a>
+      <a href="download.html" data-i18n="nav.download">下载</a>
+      <a href="docs.html" data-i18n="nav.docs">文档</a>
       <a class="nav-cta" href="https://store.steampowered.com/app/4400360/ConfigNexus___AI/" target="_blank" rel="noopener">Steam</a>
     </nav>
   </div>
@@ -30,24 +33,24 @@
 <main>
   <section class="hero">
     <div class="wrap">
-      <div class="eyebrow reveal d2"><span class="dot"></span>专属于游戏开发者的游戏数据配置平台</div>
-      <h1 class="hero-h reveal d2">超越 <span class="hl">Excel、WPS</span><br>的编辑体验</h1>
-      <p class="sub reveal d3">表格化编辑游戏配置，Excel 全格式双向导入导出，CT 列类型、数据验证 DSL、<br>Python 函数集成、本地 AI 助手，一份数据导出成 8 种主流格式。</p>
+      <div class="eyebrow reveal d2"><span class="dot"></span><span data-i18n="idx.eyebrow">专属于游戏开发者的游戏数据配置平台</span></div>
+      <h1 class="hero-h reveal d2" data-i18n="idx.heroH">超越 <span class="hl">Excel、WPS</span><br>的编辑体验</h1>
+      <p class="sub reveal d3" data-i18n="idx.sub">表格化编辑游戏配置，Excel 全格式双向导入导出，CT 列类型、数据验证 DSL、<br>Python 函数集成、本地 AI 助手，一份数据导出成 8 种主流格式。</p>
       <div class="cta-row reveal d4">
-        <a class="btn btn-primary" href="download.html">↓ 免费下载</a>
-        <a class="btn btn-ghost" href="https://store.steampowered.com/app/4400360/ConfigNexus___AI/" target="_blank" rel="noopener">在 Steam 上查看</a>
+        <a class="btn btn-primary" href="download.html" data-i18n="cta.download">↓ 免费下载</a>
+        <a class="btn btn-ghost" href="https://store.steampowered.com/app/4400360/ConfigNexus___AI/" target="_blank" rel="noopener" data-i18n="cta.steam">在 Steam 上查看</a>
       </div>
 
       <div class="shot reveal d5">
-        <div class="shot-bar"><i></i><i></i><i></i><span class="tt">ConfigNexus — 角色配置表.cnx</span></div>
-        <div class="shot-body"><div class="ph"><b>软件界面截图占位</b><br>正式上线前换成真实截图</div></div>
+        <div class="shot-bar"><i></i><i></i><i></i><span class="tt" data-i18n="idx.shotTab">ConfigNexus — 角色配置表.cnx</span></div>
+        <div class="shot-body"><div class="ph" data-i18n="idx.shotPh"><b>软件界面截图占位</b><br>正式上线前换成真实截图</div></div>
       </div>
     </div>
   </section>
 
   <section class="formats">
     <div class="wrap">
-      <div class="lbl">一份数据 · 多种导出格式</div>
+      <div class="lbl" data-i18n="idx.formatsLbl">一份数据 · 多种导出格式</div>
       <div class="fmt-row">
         <span class="fmt">JSON</span><span class="fmt">CSV</span><span class="fmt">YAML</span>
         <span class="fmt">C#</span><span class="fmt">Binary</span><span class="fmt">Protobuf</span>
@@ -59,22 +62,22 @@
   <section class="section" id="features">
     <div class="wrap">
       <div class="sec-head">
-        <div class="tag">核心能力</div>
-        <h2>为配置工作而生</h2>
+        <div class="tag" data-i18n="idx.coreTag">核心能力</div>
+        <h2 data-i18n="idx.coreH">为配置工作而生</h2>
       </div>
       <div class="cards">
-        <a class="card" href="features.html"><div class="ic">📊</div><h3>专业表格编辑</h3>
-          <p>xlsx/xls/json/csv 全格式导入，Luckysheet 内核手感，多页签预渲染秒切。</p></a>
-        <a class="card" href="features.html"><div class="ic">🧩</div><h3>CT 列类型系统</h3>
-          <p>JSON 编辑器、富文本、多数据结构、日期、资源加载器，列即类型。</p></a>
-        <a class="card" href="features.html"><div class="ic">✅</div><h3>数据验证 DSL</h3>
-          <p>8 条规则 + && 组合，表头一行写完；跨表引用外键完整性校验。</p></a>
-        <a class="card" href="features.html"><div class="ic">📤</div><h3>多样化导出</h3>
-          <p>JSON / YAML / CSV / Protobuf / C# 类 / Bytes / MessagePack 8 种格式。</p></a>
-        <a class="card" href="features.html"><div class="ic">🐍</div><h3>Python 深度集成</h3>
-          <p>单元格里调 Python 函数，SmartCache + 批量执行，沙箱脚本编辑器。</p></a>
-        <a class="card" href="features.html"><div class="ic">🏪</div><h3>扩展生态 · 创意工坊</h3>
-          <p>外部引用源、引用关系图、Git/SVN、Steam 创意工坊订阅与上传。</p></a>
+        <a class="card" href="features.html"><div class="ic">📊</div><h3 data-i18n="idx.c1t">专业表格编辑</h3>
+          <p data-i18n="idx.c1d">xlsx/xls/json/csv 全格式导入，Luckysheet 内核手感，多页签预渲染秒切。</p></a>
+        <a class="card" href="features.html"><div class="ic">🧩</div><h3 data-i18n="idx.c2t">CT 列类型系统</h3>
+          <p data-i18n="idx.c2d">JSON 编辑器、富文本、多数据结构、日期、资源加载器，列即类型。</p></a>
+        <a class="card" href="features.html"><div class="ic">✅</div><h3 data-i18n="idx.c3t">数据验证 DSL</h3>
+          <p data-i18n="idx.c3d">8 条规则 + && 组合，表头一行写完；跨表引用外键完整性校验。</p></a>
+        <a class="card" href="features.html"><div class="ic">📤</div><h3 data-i18n="idx.c4t">多样化导出</h3>
+          <p data-i18n="idx.c4d">JSON / YAML / CSV / Protobuf / C# 类 / Bytes / MessagePack 8 种格式。</p></a>
+        <a class="card" href="features.html"><div class="ic">🐍</div><h3 data-i18n="idx.c5t">Python 深度集成</h3>
+          <p data-i18n="idx.c5d">单元格里调 Python 函数，SmartCache + 批量执行，沙箱脚本编辑器。</p></a>
+        <a class="card" href="features.html"><div class="ic">🏪</div><h3 data-i18n="idx.c6t">扩展生态 · 创意工坊</h3>
+          <p data-i18n="idx.c6d">外部引用源、引用关系图、Git/SVN、Steam 创意工坊订阅与上传。</p></a>
       </div>
     </div>
   </section>
@@ -82,9 +85,9 @@
   <section class="endwrap">
     <div class="wrap">
       <div class="endcta">
-        <h2>把配置表交给 ConfigNexus</h2>
-        <p>免费下载，立即开始管理你的配置数据。</p>
-        <a class="btn btn-primary" href="download.html">↓ 免费下载</a>
+        <h2 data-i18n="idx.endH">把配置表交给 ConfigNexus</h2>
+        <p data-i18n="idx.endP">免费下载，立即开始管理你的配置数据。</p>
+        <a class="btn btn-primary" href="download.html" data-i18n="cta.download">↓ 免费下载</a>
       </div>
     </div>
   </section>
@@ -94,9 +97,10 @@
   <div class="wrap foot">
     <div class="c">© 2026 ConfigNexus</div>
     <div class="lk">
-      <a href="features.html">功能</a>
-      <a href="download.html">下载</a>
-      <a href="docs.html">文档</a>
+      <a href="features.html" data-i18n="nav.features">功能</a>
+      <a href="workshop.html" data-i18n="nav.workshop">创意工坊</a>
+      <a href="download.html" data-i18n="nav.download">下载</a>
+      <a href="docs.html" data-i18n="nav.docs">文档</a>
       <a href="https://store.steampowered.com/app/4400360/ConfigNexus___AI/" target="_blank" rel="noopener">Steam</a>
     </div>
   </div>

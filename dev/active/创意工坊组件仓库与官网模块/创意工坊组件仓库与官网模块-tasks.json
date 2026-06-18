@@ -1,0 +1,101 @@
+{
+  "task": "创意工坊组件仓库与官网模块",
+  "steps": [
+    {
+      "id": 1,
+      "title": "建仓库骨架",
+      "verify": "E:/configNexus-workshop 存在，git 已 init，.gitignore 含 node_modules/dist",
+      "status": "todo",
+      "read_files": [],
+      "write_files": ["E:/configNexus-workshop/.gitignore", "E:/configNexus-workshop/.git/*"]
+    },
+    {
+      "id": 2,
+      "title": "robocopy 搬组件到 components/",
+      "verify": "15 个组件目录齐全，无残留 node_modules/dist，_shared/_template/脚手架在",
+      "status": "todo",
+      "read_files": ["E:/configNexus-1/app/**"],
+      "write_files": ["E:/configNexus-workshop/components/**"]
+    },
+    {
+      "id": 3,
+      "title": "补全 workspaces=15 + 重生 package-lock",
+      "verify": "components/package.json workspaces 列全 15；删旧 lock 后 npm install 生成新 lock",
+      "status": "todo",
+      "read_files": ["E:/configNexus-workshop/components/*/metadata.json"],
+      "write_files": ["E:/configNexus-workshop/components/package.json", "E:/configNexus-workshop/components/package-lock.json"]
+    },
+    {
+      "id": 4,
+      "title": "搬两套文档到 docs/",
+      "verify": "docs/组件开发方案 13 篇、docs/插件Mod开发方案 3 篇",
+      "status": "todo",
+      "read_files": ["E:/configNexus-1/app/docs/**"],
+      "write_files": ["E:/configNexus-workshop/docs/**"]
+    },
+    {
+      "id": 5,
+      "title": "搬两个技能 + 修 mod 技能链接",
+      "verify": "skills/ 下两技能；rg 扫无 ../../../ 与私有路径残留；frontmatter 合法",
+      "status": "todo",
+      "read_files": ["E:/configNexus-site/skills/confignexus-component-dev/**", "E:/configNexus-1/.claude/skills/confignexus-mod/**"],
+      "write_files": ["E:/configNexus-workshop/skills/**"]
+    },
+    {
+      "id": 6,
+      "title": "写 README + LICENSE(Apache-2.0)",
+      "verify": "README 结构清晰含 Node/npm 版本与安装说明；LICENSE 为 Apache-2.0 全文",
+      "status": "todo",
+      "read_files": ["E:/configNexus-site/skills/README.md", "E:/configNexus-site/skills/install.mjs"],
+      "write_files": ["E:/configNexus-workshop/README.md", "E:/configNexus-workshop/LICENSE"]
+    },
+    {
+      "id": 7,
+      "title": "发布前私密体检 + 构建自检 + 本地提交",
+      "verify": "扫无私有路径；npm install + bag_app npm run build 退出码 0；git commit 成功；configNexus-1 无改动",
+      "status": "todo",
+      "read_files": ["E:/configNexus-workshop/**"],
+      "write_files": ["E:/configNexus-workshop/**"]
+    },
+    {
+      "id": 8,
+      "title": "生成 workshop-components.js",
+      "verify": "文件含 15 条且是合法 JS，能被浏览器 script 加载",
+      "status": "todo",
+      "read_files": ["E:/configNexus-1/app/*/metadata.json"],
+      "write_files": ["E:/configNexus-site/scripts/gen-workshop-data.mjs", "E:/configNexus-site/workshop-components.js"]
+    },
+    {
+      "id": 9,
+      "title": "建 workshop.html（仿 features.html）",
+      "verify": "浏览器见 15 张卡片(图标+名+简介) + GitHub 按钮 href 指向新仓库、新标签打开",
+      "status": "todo",
+      "read_files": ["E:/configNexus-site/features.html", "E:/configNexus-site/site.css", "E:/configNexus-site/workshop-components.js"],
+      "write_files": ["E:/configNexus-site/workshop.html", "E:/configNexus-site/workshop.js"]
+    },
+    {
+      "id": 10,
+      "title": "五处 nav + footer 加创意工坊链接",
+      "verify": "index/features/download/docs/workshop 顶部都能看到并点到创意工坊",
+      "status": "todo",
+      "read_files": ["E:/configNexus-site/index.html", "E:/configNexus-site/features.html", "E:/configNexus-site/download.html", "E:/configNexus-site/docs.html"],
+      "write_files": ["E:/configNexus-site/index.html", "E:/configNexus-site/features.html", "E:/configNexus-site/download.html", "E:/configNexus-site/docs.html", "E:/configNexus-site/workshop.html"]
+    },
+    {
+      "id": 11,
+      "title": "i18n.js 补四语",
+      "verify": "切英/日/韩导航与页面文案变对应语言无中文残留；组件名取 displayNames",
+      "status": "todo",
+      "read_files": ["E:/configNexus-site/i18n.js"],
+      "write_files": ["E:/configNexus-site/i18n.js"]
+    },
+    {
+      "id": 12,
+      "title": "官网构建校验 + diff 核对",
+      "verify": "node build-docs.mjs 退出码 0；git diff --name-only HEAD 只含本任务预期文件",
+      "status": "todo",
+      "read_files": ["E:/configNexus-site/build-docs.mjs"],
+      "write_files": []
+    }
+  ]
+}

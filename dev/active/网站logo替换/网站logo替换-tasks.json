@@ -1,0 +1,9 @@
+{
+  "task": "网站logo替换",
+  "steps": [
+    { "id": 1, "title": "复制 Logo.png", "verify": "文件存在", "status": "done", "read_files": [], "write_files": ["assets/logo.png"] },
+    { "id": 2, "title": "四个 html 换 img + favicon", "verify": "四页与 tab 显示图标", "status": "todo", "read_files": ["index.html","features.html","download.html","docs.html"], "write_files": ["index.html","features.html","download.html","docs.html"] },
+    { "id": 3, "title": "site.css 换 .brand-logo 删孤儿", "verify": "尺寸正常", "status": "todo", "read_files": ["site.css"], "write_files": ["site.css"] },
+    { "id": 4, "title": "intro.js 开场加 logo", "verify": "开场显示图标", "status": "todo", "read_files": ["intro.js","site.css"], "write_files": ["intro.js","site.css"] }
+  ]
+}

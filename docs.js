@@ -1,19 +1,43 @@
-/* ConfigNexus 官网文档页：侧边栏导航 + Markdown 渲染（移植自软件欢迎页 parseMarkdown） */
+/* ConfigNexus 官网文档页：四语侧边栏导航 + Markdown 渲染（移植自软件欢迎页 parseMarkdown）。
+   - 结构来自 docs-manifest.js（稳定 ID 有序），按 window.CN_LANG 渲染分类/篇目标题。
+   - 正文优先用当前语言翻译；该语言缺这篇时回退中文并在顶部挂"暂无翻译"提示条。
+   - 深链用稳定 ID（如 #table-xlsx）；同时兼容旧的中文 hash（如 #表格编辑体验/xlsx文件）。 */
 (function () {
   'use strict';
   var DOCS = window.DOCS || {};
+  var MANIFEST = window.DOC_MANIFEST || [];
+  var CATS = window.DOC_CATS || {};
+  var lang = window.CN_LANG || 'zh';
 
-  // 目录结构（分类 → 教程页），顺序与软件欢迎页一致
-  var STRUCTURE = [
-    { cat: '表格编辑体验', label: '表格编辑体验', pages: ['xlsx文件', 'xls文件', 'json文件', 'csv文件', 'cnx工程文件', '多页签管理'] },
-    { cat: 'CT列类型', label: 'CT 列类型', pages: ['JSON编辑器', '富文本编辑', '多数据编辑', '日期编辑', '资源编辑'] },
-    { cat: '数据验证', label: '数据验证', pages: ['验证规则DSL', '数据验证'] },
-    { cat: '数据导出', label: '数据导出', pages: ['数据导出'] },
-    { cat: 'Python集成', label: 'Python 集成', pages: ['Python脚本编辑器', 'Python公式集成', '持久化脚本库'] },
-    { cat: '实用工具箱', label: '实用工具箱', pages: ['多语言工作流', '多语言字符提取', '字体子集化', '批量编辑', '多数据批量修改', '数据拼接', '数据转换', 'ID生成器', '智能粘贴', '自定义公式', '自动保存'] },
-    { cat: '扩展生态', label: '扩展生态', pages: ['文件浏览器', '外部引用源', '引用关系图', '创意工坊', '源代码管理', '数据表对比'] }
-  ];
-  var DLC = { '扩展生态/数据表对比': 1 };
+  // 文档页 UI 文案（按当前语言）
+  var UI = {
+    zh: { empty: '暂无文档内容。', dlc: 'DLC', fallback: '⚠ 该教程暂无对应语言翻译，以下为中文原文。' },
+    en: { empty: 'No documentation yet.', dlc: 'DLC', fallback: '⚠ This tutorial is not available in English yet — the Chinese version is shown below.' },
+    ja: { empty: 'ドキュメントがまだありません。', dlc: 'DLC', fallback: '⚠ このチュートリアルはまだ日本語訳がありません。以下は中国語版です。' },
+    ko: { empty: '문서가 아직 없습니다.', dlc: 'DLC', fallback: '⚠ 이 튜토리얼은 아직 한국어 번역이 없습니다. 아래는 중국어 원문입니다.' }
+  };
+  var ui = UI[lang] || UI.zh;
+
+  // ---------- 由 manifest 派生：分组 / 别名 / 索引 ----------
+  var groups = [], byCat = {}, BYID = {}, ALIAS = {};
+  MANIFEST.forEach(function (it) {
+    if (!byCat[it.cat]) { byCat[it.cat] = { cat: it.cat, items: [] }; groups.push(byCat[it.cat]); }
+    byCat[it.cat].items.push(it);
+    BYID[it.id] = it;
+    if (it.keys && it.keys.zh) ALIAS[it.keys.zh] = it.id;   // 旧中文 hash 兼容
+  });
+
+  function base(k) { var p = String(k == null ? '' : k).split('/'); return p[p.length - 1]; }
+  function catLabel(cat) { var c = CATS[cat]; return c ? (c[lang] || c.zh || cat) : cat; }
+  function titleOf(it) { var k = (it.keys && it.keys[lang]); if (k == null) k = it.keys && it.keys.zh; return base(k); }
+  // 返回 {md, contentLang}；contentLang 标明正文实际语言（用于 lang 属性），fallback 时为 zh
+  function resolveContent(it) {
+    var k = it.keys && it.keys[lang];
+    if (k != null && DOCS[lang] && DOCS[lang][k] != null) return { md: DOCS[lang][k], contentLang: lang, fallback: false };
+    var zk = it.keys && it.keys.zh;
+    if (zk != null && DOCS.zh && DOCS.zh[zk] != null) return { md: DOCS.zh[zk], contentLang: 'zh', fallback: true };
+    return null;
+  }
 
   // ---------- Markdown 渲染（移植自 welcome.js parseMarkdown） ----------
   function escapeHtml(s) {
@@ -21,8 +45,8 @@
   }
   function parse(md) {
     var html = md.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
-    // 媒体路径改写到官网目录
-    html = html.replace(/Res\/zh\//g, 'docs/Res-zh/');
+    // 媒体路径改写到官网目录（按 md 内引用的语言前缀，zh/en/ja/ko 通用）
+    html = html.replace(/Res\/(zh|en|ja|ko)\//g, 'docs/Res-$1/');
     // 桌面端专属指令在网页上去掉
     html = html.replace(/^createtab:.*$/gim, '');
 
@@ -39,15 +63,15 @@
       var p = path.trim(), c = cap ? cap.trim() : '';
       return '<div class="video-player-container"><div class="video-player-wrapper">' +
         '<video class="video-player" controls loop muted playsinline preload="metadata" ' +
-        'onerror="this.parentElement.innerHTML=\'<div class=&quot;video-error&quot;>📹 视频暂未提供</div>\'">' +
-        '<source src="' + p + '" type="video/webm">您的浏览器不支持视频播放。</video></div>' +
+        'onerror="this.parentElement.innerHTML=\'<div class=&quot;video-error&quot;>📹</div>\'">' +
+        '<source src="' + p + '" type="video/webm"></video></div>' +
         (c ? '<p class="video-caption">' + c + '</p>' : '') + '</div>';
     });
 
     // 3) 图片
     html = html.replace(/!\[(.*?)\]\((.*?)\)/g, function (m, alt, src) {
       return '<div class="gif-demo-container"><img src="' + src + '" alt="' + alt + '" class="gif-demo" ' +
-        'onerror="this.parentElement.innerHTML=\'<p class=&quot;image-error&quot;>⚠️ 图片加载失败</p>\'" />' +
+        'onerror="this.parentElement.innerHTML=\'<p class=&quot;image-error&quot;>⚠️</p>\'" />' +
         (alt ? '<p class="gif-caption">' + alt + '</p>' : '') + '</div>';
     });
 
@@ -117,42 +141,49 @@
   // ---------- 侧边栏 ----------
   var side = document.getElementById('docSide');
   var content = document.getElementById('docContent');
+
   function buildSide() {
     var h = '';
-    STRUCTURE.forEach(function (g) {
-      h += '<div class="doc-group"><div class="doc-group-t">' + g.label + '</div>';
-      g.pages.forEach(function (p) {
-        var key = g.cat + '/' + p;
-        if (!DOCS[key]) return;
-        var dlc = DLC[key] ? ' <span class="doc-dlc">DLC</span>' : '';
-        h += '<a class="doc-link" data-key="' + key + '" href="#' + encodeURIComponent(key) + '">' + p + dlc + '</a>';
+    groups.forEach(function (g) {
+      h += '<div class="doc-group"><div class="doc-group-t">' + escapeHtml(catLabel(g.cat)) + '</div>';
+      g.items.forEach(function (it) {
+        var dlc = it.dlc ? ' <span class="doc-dlc">' + ui.dlc + '</span>' : '';
+        h += '<a class="doc-link" data-id="' + it.id + '" href="#' + it.id + '">' + escapeHtml(titleOf(it)) + dlc + '</a>';
       });
       h += '</div>';
     });
     side.innerHTML = h;
   }
 
-  function firstKey() {
-    for (var i = 0; i < STRUCTURE.length; i++) {
-      var g = STRUCTURE[i];
-      for (var j = 0; j < g.pages.length; j++) { var k = g.cat + '/' + g.pages[j]; if (DOCS[k]) return k; }
-    }
+  function firstId() { return MANIFEST.length ? MANIFEST[0].id : null; }
+
+  // 把 hash 解析成稳定 ID（兼容旧中文 hash）
+  function toId(raw) {
+    if (!raw) return null;
+    if (BYID[raw]) return raw;
+    if (ALIAS[raw]) return ALIAS[raw];
     return null;
   }
 
-  function show(key) {
-    if (!DOCS[key]) { key = firstKey(); }
-    if (!key) { content.innerHTML = '<p class="nt-p">暂无文档内容。</p>'; return; }
-    content.innerHTML = parse(DOCS[key]);
+  function show(id) {
+    var it = BYID[id] ? BYID[id] : (id ? BYID[firstId()] : BYID[firstId()]);
+    if (!it) { content.innerHTML = '<p class="nt-p">' + ui.empty + '</p>'; return; }
+    var r = resolveContent(it);
+    if (!r) { content.innerHTML = '<p class="nt-p">' + ui.empty + '</p>'; return; }
+    var note = r.fallback ? '<div class="doc-fallback-note">' + ui.fallback + '</div>' : '';
+    content.innerHTML = note + parse(r.md);
+    content.setAttribute('lang', r.contentLang === 'zh' ? 'zh-CN' : r.contentLang);
     content.scrollTop = 0;
     window.scrollTo({ top: 0, behavior: 'smooth' });
     var links = side.querySelectorAll('.doc-link');
-    for (var i = 0; i < links.length; i++) links[i].classList.toggle('active', links[i].getAttribute('data-key') === key);
+    for (var i = 0; i < links.length; i++) links[i].classList.toggle('active', links[i].getAttribute('data-id') === it.id);
   }
 
   function fromHash() {
-    var h = decodeURIComponent((location.hash || '').replace(/^#/, ''));
-    show(h || firstKey());
+    var raw = '';
+    try { raw = decodeURIComponent((location.hash || '').replace(/^#/, '')); }
+    catch (e) { raw = (location.hash || '').replace(/^#/, ''); }   // 非法 % 时不抛错
+    show(toId(raw) || firstId());
   }
 
   buildSide();
