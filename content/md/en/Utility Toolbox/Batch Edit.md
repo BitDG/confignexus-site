@@ -49,3 +49,9 @@ After editing, click "Apply" to write all changes back to the original multi-dat
 > - The batch editor respects mapping table associations, showing mapped names alongside raw IDs
 > - Use the value collection feature to quickly see all distinct values in a column
 > - Changes are only applied when you confirm — the original data remains unchanged until then
+
+## Related Tutorials
+
+- Edit a single multi-data cell → [[Multi-Data Edit Mode]]
+- Apply arithmetic to plain numeric columns in bulk → [[Multi-Data Batch Modification]]
+- Set a column to the multi-data type → [[Multi-Data Edit Mode]]

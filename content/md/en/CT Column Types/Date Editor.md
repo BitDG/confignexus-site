@@ -50,3 +50,10 @@ The calendar panel includes shortcut buttons for frequently used dates:
 > - Quick selection buttons help avoid manual typing errors
 > - The calendar panel highlights the currently selected date
 > - Navigate between months using the arrow buttons in the calendar header
+
+## Related Tutorials
+
+- Attach image / audio paths to cells → [[Resource Editor]]
+- Edit nested structures (reward lists, etc.) → [[Multi-Data Edit Mode]] [[JSON Editor]]
+- How date columns are exported → [[Data Export]]
+- Where the column type is stored → [[cnx Project File]]

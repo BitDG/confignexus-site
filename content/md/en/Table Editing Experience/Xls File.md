@@ -22,3 +22,10 @@ Xls files imported into ConfigNexus support the following features:
 - ✅ Font styles
 - ✅ Font sizes
 - ✅ Worksheet tab colors
+
+## Related Tutorials
+
+- Import the newer format with fuller feature support → [[Xlsx File]]
+- Save the project in ConfigNexus's native format → [[cnx Project File]]
+- Add validation rules to imported data → [[Data Validation]]
+- Re-add key calculations as Python formulas → [[Python Formula Integration]]

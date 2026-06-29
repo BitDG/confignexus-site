@@ -45,3 +45,8 @@ Auto Save is enabled by default. You can toggle it in:
 
 > [!NOTE]
 > If the original file has been moved or deleted, Auto Save will show an error notification prompting you to use "Save As" instead.
+
+## Related Tutorials
+
+- Save the file in an engine-readable format → [[Data Export]]
+- See what the CNX format keeps that XLSX drops → [[cnx Project File]]

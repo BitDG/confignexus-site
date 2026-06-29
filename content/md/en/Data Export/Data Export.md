@@ -23,3 +23,9 @@ video:Res/zh/videos/导出数据.webm|Export Data
 
 - Data export only exports data from the **current tab**
 - Each worksheet is exported as a separate file
+
+## Related Tutorials
+
+- Which rules are checked before export → [[Data Validation]] [[Validation Rules DSL]]
+- How rich text / multi-data columns are exported → [[Rich Text Edit Mode]] [[Multi-Data Edit Mode]]
+- Automate pre-export processing with Python scripts → [[Python Script Editor]]

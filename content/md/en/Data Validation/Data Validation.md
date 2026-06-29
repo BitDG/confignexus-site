@@ -134,3 +134,9 @@ window.validator.config.customRules = [
   }
 ];
 ```
+
+## Related Tutorials
+
+- Full DSL rule syntax and examples → [[Validation Rules DSL]]
+- Reference a table from another project → [[External References]]
+- Export to your engine after validation passes → [[Data Export]]

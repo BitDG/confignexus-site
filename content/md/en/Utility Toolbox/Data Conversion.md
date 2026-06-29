@@ -13,6 +13,12 @@ createtab:Res/zh/templates/数据转换演示.cnx
 | Expected Value Calculation | Compute weighted values using quantity and probability fields |
 | Delimiter Detection | Automatically detect data separators within cell content |
 
+> [!note]
+> **How to open:** Right-click the column header of the multi-data column (the letter row at the top of the spreadsheet) → **Generate Content** → **Data Transformation**. The multi-data column must first be configured as a CT Multi-Data Editor (right-click column header → CT Properties).
+
+> [!note]
+> This section is being translated. Full step-by-step content will be aligned with the Chinese tutorial in a future update.
+
 ## How It Works
 
 Adapts to CT multi-data editor data, performing calculations and conversions based on mapping table configuration.
@@ -48,3 +54,9 @@ Item 1002: Gold Price = 8
 
 Total Value = 225 + 340 = 565
 ```
+
+## Related Tutorials
+
+- Import an external mapping table → [[External References]]
+- Edit the multi-data format → [[Multi-Data Edit Mode]]
+- Need more complex calculation logic → [[Python Script Editor]]

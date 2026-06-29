@@ -14,7 +14,7 @@ Open the reference file for learning
 
 ## Feature Demo
 
-video:Res/zh/videos/多数据编辑.webm|Multi-Data Editing
+video:Res/zh/videos/多数据批量修改.webm|Multi-Data Editing
 
 ## Batch Edit Operations
 
@@ -26,3 +26,9 @@ Follow these steps for batch modification:
 4. Enable rounding option if needed
 
 video:Res/zh/videos/批量编辑.webm|Batch Editing
+
+## Related Tutorials
+
+- Expanded batch editing for multi-data columns → [[Batch Edit]]
+- Add validation rules to keep edits within valid ranges → [[Data Validation]]
+- Export the modified data to your engine → [[Data Export]]

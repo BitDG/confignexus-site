@@ -24,4 +24,9 @@ ConfigNexus로 가져온 Xlsx 파일은 다음 기능을 지원합니다:
 - ✅ 워크시트 탭 색상
 
 > [!NOTE]
-> Xlsm 파일은 매크로와 VBA를 지원하지 않습니다. ConfigNexus Pro 버전에서는 내장된 Python 함수를 대안으로 사용할 수 있습니다.
+> Xlsm 파일은 매크로와 VBA를 지원하지 않습니다. ConfigNexus Pro 버전에서는 내장된 Python 함수를 대안으로 사용할 수 있습니다([[Python 스크립트 편집기]] / [[Python 수식 통합]]).
+
+## 다음에 배울 내용
+
+- 매크로/VBA를 Python으로 대체 → [[Python 스크립트 편집기]] [[Python 수식 통합]]
+- 모든 정보를 보존하려면 cnx로 저장 → [[cnx 프로젝트 파일]]

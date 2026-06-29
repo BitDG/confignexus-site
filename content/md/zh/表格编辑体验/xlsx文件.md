@@ -1,6 +1,6 @@
 # xlsx / xlsm 文件
 
-Excel 2007+ 格式（.xlsx / .xlsm）的导入和使用。ConfigNexus 用 Luckysheet 内核渲染，操作手感几乎跟 Excel 一致。
+手头一堆 xlsx 配置表，想直接搬进 ConfigNexus 又担心格式丢——颜色没了、公式跑偏了、合并单元格变形了？ConfigNexus 基于 Luckysheet 内核渲染 xlsx，**导进来的数据、样式、公式几乎原样保留**，操作手感跟 Excel 一致。
 
 ## 导入方式
 
@@ -53,8 +53,8 @@ xlsm 是带宏的 xlsx。ConfigNexus **不支持执行宏 / VBA**——为了安
 
 替代方案：
 
-- 简单宏 → 改写为 Python 脚本（详见教程《Python 脚本编辑器》）
-- 复杂宏 → 改写为 Python 公式（详见《Python 公式集成》）
+- 简单宏 → 改写为 Python 脚本（详见教程[[Python脚本编辑器]]）
+- 复杂宏 → 改写为 Python 公式（详见[[Python公式集成]]）
 
 > [!NOTE]
 > 不支持宏 ≠ 拒绝导入。xlsm 文件能正常导入，只是宏代码会被**丢弃**。导入完成后会有提示告诉你丢弃了多少段宏。
@@ -69,7 +69,7 @@ xlsm 是带宏的 xlsx。ConfigNexus **不支持执行宏 / VBA**——为了安
 - Python 公式 → **不导出**（xlsx 没有 Python 运行环境）
 - 验证规则 DSL → 部分转为 xlsx 数据有效性
 
-要保留全部信息，存为 cnx 工程文件（详见《cnx 工程文件》）。
+要保留全部信息，存为 cnx 工程文件（详见[[cnx工程文件]]）。
 
 ## 跟 cnx 怎么选
 

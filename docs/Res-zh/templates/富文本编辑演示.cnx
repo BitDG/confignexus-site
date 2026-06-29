@@ -1,0 +1,64 @@
+{
+  "projectInfo": {
+    "name": "富文本编辑演示",
+    "version": "1.0"
+  },
+  "workbook": {
+    "name": "富文本编辑演示",
+    "sheets": [
+      {
+        "name": "装备表",
+        "index": 0,
+        "status": 1,
+        "row": 50,
+        "column": 20,
+        "celldata": [
+          { "r": 0, "c": 0, "v": { "v": "id", "m": "id", "ct": { "fa": "General", "t": "g" } } },
+          { "r": 0, "c": 1, "v": { "v": "name", "m": "name", "ct": { "fa": "General", "t": "g" } } },
+          { "r": 0, "c": 2, "v": { "v": "quality", "m": "quality", "ct": { "fa": "General", "t": "g" } } },
+          { "r": 0, "c": 3, "v": { "v": "desc", "m": "desc", "ct": { "fa": "General", "t": "g" } } },
+
+          { "r": 1, "c": 0, "v": { "v": "编号", "m": "编号", "ct": { "fa": "General", "t": "g" } } },
+          { "r": 1, "c": 1, "v": { "v": "名称", "m": "名称", "ct": { "fa": "General", "t": "g" } } },
+          { "r": 1, "c": 2, "v": { "v": "品质", "m": "品质", "ct": { "fa": "General", "t": "g" } } },
+          { "r": 1, "c": 3, "v": { "v": "描述", "m": "描述", "ct": { "fa": "General", "t": "g" } } },
+
+          { "r": 2, "c": 0, "v": { "v": "int", "m": "int", "ct": { "fa": "General", "t": "g" } } },
+          { "r": 2, "c": 1, "v": { "v": "string", "m": "string", "ct": { "fa": "General", "t": "g" } } },
+          { "r": 2, "c": 2, "v": { "v": "string", "m": "string", "ct": { "fa": "General", "t": "g" } } },
+          { "r": 2, "c": 3, "v": { "v": "富文本", "m": "富文本", "ct": { "fa": "config.rich-text", "t": "g" } } },
+
+          { "r": 3, "c": 0, "v": { "v": "道具唯一ID", "m": "道具唯一ID", "ct": { "fa": "General", "t": "g" } } },
+          { "r": 3, "c": 1, "v": { "v": "道具名称", "m": "道具名称", "ct": { "fa": "General", "t": "g" } } },
+          { "r": 3, "c": 2, "v": { "v": "品质等级", "m": "品质等级", "ct": { "fa": "General", "t": "g" } } },
+          { "r": 3, "c": 3, "v": { "v": "给玩家看的富文本描述，双击编辑", "m": "给玩家看的富文本描述，双击编辑", "ct": { "fa": "General", "t": "g" } } },
+
+          { "r": 4, "c": 0, "v": { "v": "required|unique", "m": "required|unique", "ct": { "fa": "General", "t": "g" } } },
+          { "r": 4, "c": 1, "v": { "v": "required", "m": "required", "ct": { "fa": "General", "t": "g" } } },
+          { "r": 4, "c": 2, "v": { "v": "", "m": "", "ct": { "fa": "General", "t": "g" } } },
+          { "r": 4, "c": 3, "v": { "v": "", "m": "", "ct": { "fa": "General", "t": "g" } } },
+
+          { "r": 5, "c": 0, "v": { "v": 1001, "m": "1001", "ct": { "fa": "General", "t": "g" } } },
+          { "r": 5, "c": 1, "v": { "v": "烈焰长剑", "m": "烈焰长剑", "ct": { "fa": "General", "t": "g" } } },
+          { "r": 5, "c": 2, "v": { "v": "史诗", "m": "史诗", "ct": { "fa": "General", "t": "g" } } },
+          { "r": 5, "c": 3, "v": { "v": "<h3>烈焰长剑</h3><p>一把附带<strong>火焰附魔</strong>的史诗武器。</p><ul><li>攻击力 <strong>+120</strong></li><li>攻击附带 <span style='color:#e03e3e'>灼烧</span> 效果，每秒造成 15 点伤害</li></ul><p><em>“锻造于龙焰之炉。”</em></p>", "m": "<h3>烈焰长剑</h3><p>一把附带<strong>火焰附魔</strong>的史诗武器。</p><ul><li>攻击力 <strong>+120</strong></li><li>攻击附带 <span style='color:#e03e3e'>灼烧</span> 效果，每秒造成 15 点伤害</li></ul><p><em>“锻造于龙焰之炉。”</em></p>", "ct": { "fa": "General", "t": "g" } } },
+
+          { "r": 6, "c": 0, "v": { "v": 1002, "m": "1002", "ct": { "fa": "General", "t": "g" } } },
+          { "r": 6, "c": 1, "v": { "v": "寒冰护盾", "m": "寒冰护盾", "ct": { "fa": "General", "t": "g" } } },
+          { "r": 6, "c": 2, "v": { "v": "稀有", "m": "稀有", "ct": { "fa": "General", "t": "g" } } },
+          { "r": 6, "c": 3, "v": { "v": "<h3>寒冰护盾</h3><p>格挡时有 <strong>30%</strong> 几率<span style='color:#0b6e99'>冰冻</span>攻击者 2 秒。</p><blockquote>装备需求：等级 ≥ 20</blockquote>", "m": "<h3>寒冰护盾</h3><p>格挡时有 <strong>30%</strong> 几率<span style='color:#0b6e99'>冰冻</span>攻击者 2 秒。</p><blockquote>装备需求：等级 ≥ 20</blockquote>", "ct": { "fa": "General", "t": "g" } } },
+
+          { "r": 7, "c": 0, "v": { "v": 1003, "m": "1003", "ct": { "fa": "General", "t": "g" } } },
+          { "r": 7, "c": 1, "v": { "v": "治疗药水", "m": "治疗药水", "ct": { "fa": "General", "t": "g" } } },
+          { "r": 7, "c": 2, "v": { "v": "普通", "m": "普通", "ct": { "fa": "General", "t": "g" } } },
+          { "r": 7, "c": 3, "v": { "v": "", "m": "", "ct": { "fa": "General", "t": "g" } } }
+        ],
+        "config": {
+          "merge": {},
+          "rowlen": {},
+          "columnlen": { "3": 320 }
+        }
+      }
+    ]
+  }
+}

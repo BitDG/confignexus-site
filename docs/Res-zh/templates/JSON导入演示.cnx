@@ -1,0 +1,84 @@
+{
+  "projectInfo": {
+    "name": "JSON导入演示",
+    "version": "1.0"
+  },
+  "workbook": {
+    "name": "JSON导入演示",
+    "sheets": [
+      {
+        "name": "道具数据",
+        "index": 0,
+        "status": 1,
+        "row": 50,
+        "column": 20,
+        "celldata": [
+          { "r": 0, "c": 0, "v": { "v": "id",     "m": "id",     "ct": { "fa": "General", "t": "g" } } },
+          { "r": 0, "c": 1, "v": { "v": "name",   "m": "name",   "ct": { "fa": "General", "t": "g" } } },
+          { "r": 0, "c": 2, "v": { "v": "type",   "m": "type",   "ct": { "fa": "General", "t": "g" } } },
+          { "r": 0, "c": 3, "v": { "v": "price",  "m": "price",  "ct": { "fa": "General", "t": "g" } } },
+          { "r": 0, "c": 4, "v": { "v": "effect", "m": "effect", "ct": { "fa": "General", "t": "g" } } },
+
+          { "r": 1, "c": 0, "v": { "v": "编号",     "m": "编号",     "ct": { "fa": "General", "t": "g" } } },
+          { "r": 1, "c": 1, "v": { "v": "名称",     "m": "名称",     "ct": { "fa": "General", "t": "g" } } },
+          { "r": 1, "c": 2, "v": { "v": "类型",     "m": "类型",     "ct": { "fa": "General", "t": "g" } } },
+          { "r": 1, "c": 3, "v": { "v": "价格",     "m": "价格",     "ct": { "fa": "General", "t": "g" } } },
+          { "r": 1, "c": 4, "v": { "v": "效果描述", "m": "效果描述", "ct": { "fa": "General", "t": "g" } } },
+
+          { "r": 2, "c": 0, "v": { "v": "int",    "m": "int",    "ct": { "fa": "General", "t": "g" } } },
+          { "r": 2, "c": 1, "v": { "v": "string", "m": "string", "ct": { "fa": "General", "t": "g" } } },
+          { "r": 2, "c": 2, "v": { "v": "string", "m": "string", "ct": { "fa": "General", "t": "g" } } },
+          { "r": 2, "c": 3, "v": { "v": "int",    "m": "int",    "ct": { "fa": "General", "t": "g" } } },
+          { "r": 2, "c": 4, "v": { "v": "string", "m": "string", "ct": { "fa": "General", "t": "g" } } },
+
+          { "r": 3, "c": 0, "v": { "v": "道具唯一ID",                       "m": "道具唯一ID",                       "ct": { "fa": "General", "t": "g" } } },
+          { "r": 3, "c": 1, "v": { "v": "道具名称",                         "m": "道具名称",                         "ct": { "fa": "General", "t": "g" } } },
+          { "r": 3, "c": 2, "v": { "v": "道具分类(weapon/armor/consumable/material)", "m": "道具分类(weapon/armor/consumable/material)", "ct": { "fa": "General", "t": "g" } } },
+          { "r": 3, "c": 3, "v": { "v": "金币价格",                         "m": "金币价格",                         "ct": { "fa": "General", "t": "g" } } },
+          { "r": 3, "c": 4, "v": { "v": "使用效果（可为空，空格子导出时key会被省略）", "m": "使用效果（可为空，空格子导出时key会被省略）", "ct": { "fa": "General", "t": "g" } } },
+
+          { "r": 4, "c": 0, "v": { "v": "required|unique", "m": "required|unique", "ct": { "fa": "General", "t": "g" } } },
+          { "r": 4, "c": 1, "v": { "v": "required",        "m": "required",        "ct": { "fa": "General", "t": "g" } } },
+          { "r": 4, "c": 2, "v": { "v": "required",        "m": "required",        "ct": { "fa": "General", "t": "g" } } },
+          { "r": 4, "c": 3, "v": { "v": "",                "m": "",                "ct": { "fa": "General", "t": "g" } } },
+          { "r": 4, "c": 4, "v": { "v": "",                "m": "",                "ct": { "fa": "General", "t": "g" } } },
+
+          { "r": 5, "c": 0, "v": { "v": 1001, "m": "1001", "ct": { "fa": "General", "t": "g" } } },
+          { "r": 5, "c": 1, "v": { "v": "烈焰剑",   "m": "烈焰剑",   "ct": { "fa": "General", "t": "g" } } },
+          { "r": 5, "c": 2, "v": { "v": "weapon",   "m": "weapon",   "ct": { "fa": "General", "t": "g" } } },
+          { "r": 5, "c": 3, "v": { "v": 500, "m": "500", "ct": { "fa": "General", "t": "g" } } },
+          { "r": 5, "c": 4, "v": { "v": "攻击力+120，附带灼烧效果", "m": "攻击力+120，附带灼烧效果", "ct": { "fa": "General", "t": "g" } } },
+
+          { "r": 6, "c": 0, "v": { "v": 1002, "m": "1002", "ct": { "fa": "General", "t": "g" } } },
+          { "r": 6, "c": 1, "v": { "v": "寒冰护盾", "m": "寒冰护盾", "ct": { "fa": "General", "t": "g" } } },
+          { "r": 6, "c": 2, "v": { "v": "armor",    "m": "armor",    "ct": { "fa": "General", "t": "g" } } },
+          { "r": 6, "c": 3, "v": { "v": 300, "m": "300", "ct": { "fa": "General", "t": "g" } } },
+          { "r": 6, "c": 4, "v": { "v": "防御力+80，格挡时30%概率冰冻攻击者2秒", "m": "防御力+80，格挡时30%概率冰冻攻击者2秒", "ct": { "fa": "General", "t": "g" } } },
+
+          { "r": 7, "c": 0, "v": { "v": 1003, "m": "1003", "ct": { "fa": "General", "t": "g" } } },
+          { "r": 7, "c": 1, "v": { "v": "治疗药水",    "m": "治疗药水",    "ct": { "fa": "General", "t": "g" } } },
+          { "r": 7, "c": 2, "v": { "v": "consumable", "m": "consumable", "ct": { "fa": "General", "t": "g" } } },
+          { "r": 7, "c": 3, "v": { "v": 50, "m": "50", "ct": { "fa": "General", "t": "g" } } },
+          { "r": 7, "c": 4, "v": { "v": "立即恢复100点HP", "m": "立即恢复100点HP", "ct": { "fa": "General", "t": "g" } } },
+
+          { "r": 8, "c": 0, "v": { "v": 1004, "m": "1004", "ct": { "fa": "General", "t": "g" } } },
+          { "r": 8, "c": 1, "v": { "v": "魔力晶石", "m": "魔力晶石", "ct": { "fa": "General", "t": "g" } } },
+          { "r": 8, "c": 2, "v": { "v": "material", "m": "material", "ct": { "fa": "General", "t": "g" } } },
+          { "r": 8, "c": 3, "v": { "v": 200, "m": "200", "ct": { "fa": "General", "t": "g" } } },
+
+          { "r": 9, "c": 1, "v": { "v": "↑ effect列故意留空，导出JSON时该key会被省略（不是null）", "m": "↑ effect列故意留空，导出JSON时该key会被省略（不是null）", "ct": { "fa": "General", "t": "g" } } },
+
+          { "r": 10, "c": 1, "v": { "v": "↓ 下一行ID列故意留空，导出JSON时整行消失", "m": "↓ 下一行ID列故意留空，导出JSON时整行消失", "ct": { "fa": "General", "t": "g" } } },
+          { "r": 11, "c": 1, "v": { "v": "空ID行——试试导出后这行还在不在", "m": "空ID行——试试导出后这行还在不在", "ct": { "fa": "General", "t": "g" } } },
+          { "r": 11, "c": 2, "v": { "v": "material", "m": "material", "ct": { "fa": "General", "t": "g" } } },
+          { "r": 11, "c": 3, "v": { "v": 999, "m": "999", "ct": { "fa": "General", "t": "g" } } }
+        ],
+        "config": {
+          "merge": {},
+          "rowlen": {},
+          "columnlen": { "4": 360 }
+        }
+      }
+    ]
+  }
+}

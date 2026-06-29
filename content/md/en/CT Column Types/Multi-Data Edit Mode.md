@@ -35,3 +35,10 @@ video:Res/zh/videos/多数据编辑器编辑数据.webm|Edit Multi-Data Editor D
 > - Fields like `item` and `reward` can be set as **mapping tables** in the settings tab
 > - After setting, double-clicking a cell will display the corresponding ID names, reducing selection errors
 > - You can also quickly add corresponding ID configurations through buttons
+
+## Related Tutorials
+
+- A more flexible way to edit nested JSON → [[JSON Editor]]
+- Attach images / audio to cells → [[Resource Editor]]
+- Batch-edit many rows of multi-data columns → [[Multi-Data Batch Modification]]
+- Export to your engine → [[Data Export]]

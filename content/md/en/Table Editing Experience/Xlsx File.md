@@ -25,3 +25,9 @@ Xlsx files imported into ConfigNexus support the following features:
 
 > [!NOTE]
 > Xlsm files do not support macros and VBA. In ConfigNexus Pro, you can use built-in Python functions as an alternative.
+
+## Related Tutorials
+
+- Rewrite simple macros as Python scripts → [[Python Script Editor]]
+- Rewrite complex macros as Python formulas → [[Python Formula Integration]]
+- Keep all info by saving as a cnx project → [[cnx Project File]]

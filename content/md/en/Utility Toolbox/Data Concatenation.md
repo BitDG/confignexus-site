@@ -15,13 +15,12 @@ createtab:Res/zh/templates/数据拼接演示.cnx
 
 ## How to Use
 
-1. Select the target column where results will be placed
-2. Open the Data Concatenation tool
+1. Hold **Ctrl** and click the column headers of the source columns in order — the first column becomes `{A}`, the second `{B}`, and so on
+2. **Right-click any selected column header** → **Generate Content** → **Data Concatenation**
 3. Choose source columns and configure the format template
 4. Set the delimiter between values
 5. Preview the result and click "Apply"
 
-![](数据拼接.png)
 
 ## Use Cases
 
@@ -47,3 +46,11 @@ Columns: Module + Type + ID
 Delimiter: .
 Result: game.weapon.1001, game.armor.2001
 ```
+
+## Related Tutorials
+
+- Look up names by ID across tables before concatenating → [[Data Conversion]]
+- Run calculations on each group of a multi-data column → [[Multi-Data Batch Modification]]
+- Export the concatenated result to your engine → [[Data Export]]
+- Handle complex logic with a script instead → [[Python Script Editor]]
+- Filter out empty rows first → [[Data Validation]]

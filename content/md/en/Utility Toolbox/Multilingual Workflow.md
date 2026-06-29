@@ -29,3 +29,9 @@ video:Res/zh/videos/整合多语言.webm|Integrate Multilingual
 Export deduplicated txt files and the corresponding character set.
 
 video:Res/zh/videos/中文去重导出字体.webm|Deduplication Font Export
+
+## Related Tutorials
+
+- Feed the character set into the font tool to shrink font packs → [[Font Subsetting]]
+- Just extract the charset without integrating → [[Character Extraction]]
+- How to save and manage project files → [[cnx Project File]]

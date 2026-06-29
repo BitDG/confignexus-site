@@ -17,7 +17,7 @@ createtab:Res/zh/templates/ID生成器演示.cnx
 ## How to Use
 
 1. Select the target cell or range
-2. Open the ID Generator from the toolbar or right-click menu
+2. **Right-click the column header** (the letter row at the top of the spreadsheet, e.g., A, B, C) → **Generate Content** → **ID Generator**
 3. Choose a generation mode (Auto-Increment, Random, or UUID)
 4. Configure the format template and parameters
 5. Click "Generate" to fill the selected cells
@@ -57,3 +57,8 @@ Result: 550e8400-e29b-41d4-a716-446655440000
 ## Preset Management
 
 Save commonly used configurations as presets for quick access. Presets store the generation mode, format template, and all parameters.
+
+## Related Tutorials
+
+- Verify there are no duplicate IDs → [[Data Validation]]
+- Build composite keys from IDs (e.g., `txt_item_1001`) → [[Data Concatenation]]

@@ -54,3 +54,9 @@ The keys become column headers and each object becomes a data row.
 > - Smart Paste activates automatically when structured content is detected
 > - If the clipboard content is plain text, normal paste behavior is used
 > - The confirmation dialog allows you to verify the result before modifying cells
+
+## Related Tutorials
+
+- Bulk-load large Markdown / JSON into tables → [[Batch Edit]]
+- Tidy up column formatting after pasting → [[Data Concatenation]]
+- Validate required / unique fields after pasting → [[Data Validation]]

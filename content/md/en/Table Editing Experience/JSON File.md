@@ -36,3 +36,11 @@ video:Res/zh/videos/导入json.webm|Import JSON
 Copied JSON content will be automatically recognized and imported when pasted
 
 video:Res/zh/videos/复制gif.webm|Paste Import JSON
+
+## Related Tutorials
+
+- Store complex nested JSON objects in a cell → [[JSON Editor]]
+- Visually batch-edit object-array data → [[Multi-Data Edit Mode]]
+- Export to more engine formats (C# / Lua / MessagePack, etc.) → [[Data Export]]
+- Add validation rules to imported data → [[Data Validation]]
+- Keep CT config and styles when saving → [[cnx Project File]]

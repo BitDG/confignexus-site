@@ -42,3 +42,11 @@ video:Res/zh/videos/资源加载器.webm|Resource Editor
 
 > [!TIP]
 > Set the resource root directory in project settings so that relative paths are generated automatically.
+
+## Related Tutorials
+
+- Add a date picker to a column → [[Date Editor]]
+- Configure nested JSON structures → [[JSON Editor]]
+- Set export path rules → [[Data Export]]
+- Modify a batch of paths at once → [[Batch Edit]]
+- Where the column type is stored → [[cnx Project File]]

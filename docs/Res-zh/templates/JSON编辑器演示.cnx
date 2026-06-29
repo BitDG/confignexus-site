@@ -1,0 +1,61 @@
+{
+  "projectInfo": {
+    "name": "JSON编辑器演示",
+    "version": "1.0"
+  },
+  "workbook": {
+    "name": "JSON编辑器演示",
+    "sheets": [
+      {
+        "name": "怪物掉落配置",
+        "index": 0,
+        "status": 1,
+        "row": 50,
+        "column": 10,
+        "celldata": [
+          {"r":0,"c":0,"v":{"v":"id","m":"id","ct":{"fa":"General","t":"g"}}},
+          {"r":0,"c":1,"v":{"v":"name","m":"name","ct":{"fa":"General","t":"g"}}},
+          {"r":0,"c":2,"v":{"v":"hp","m":"hp","ct":{"fa":"General","t":"g"}}},
+          {"r":0,"c":3,"v":{"v":"drops","m":"drops","ct":{"fa":"General","t":"g"}}},
+          {"r":1,"c":0,"v":{"v":"编号","m":"编号","ct":{"fa":"General","t":"g"}}},
+          {"r":1,"c":1,"v":{"v":"名称","m":"名称","ct":{"fa":"General","t":"g"}}},
+          {"r":1,"c":2,"v":{"v":"血量","m":"血量","ct":{"fa":"General","t":"g"}}},
+          {"r":1,"c":3,"v":{"v":"掉落配置","m":"掉落配置","ct":{"fa":"General","t":"g"}}},
+          {"r":2,"c":0,"v":{"v":"int","m":"int","ct":{"fa":"General","t":"g"}}},
+          {"r":2,"c":1,"v":{"v":"string","m":"string","ct":{"fa":"General","t":"g"}}},
+          {"r":2,"c":2,"v":{"v":"int","m":"int","ct":{"fa":"General","t":"g"}}},
+          {"r":2,"c":3,"v":{"v":"string","m":"string","ct":{"fa":"General","t":"g"}}},
+          {"r":3,"c":0,"v":{"v":"怪物ID","m":"怪物ID","ct":{"fa":"General","t":"g"}}},
+          {"r":3,"c":1,"v":{"v":"怪物名","m":"怪物名","ct":{"fa":"General","t":"g"}}},
+          {"r":3,"c":2,"v":{"v":"最大血量","m":"最大血量","ct":{"fa":"General","t":"g"}}},
+          {"r":3,"c":3,"v":{"v":"掉落物品JSON — 右键D列→CT属性→JSON编辑器后双击格子体验","m":"掉落物品JSON","ct":{"fa":"General","t":"g"}}},
+          {"r":4,"c":0,"v":{"v":"required","m":"required","ct":{"fa":"General","t":"g"}}},
+          {"r":4,"c":1,"v":{"v":"required&&len(1,30)","m":"required&&len(1,30)","ct":{"fa":"General","t":"g"}}},
+          {"r":4,"c":2,"v":{"v":"range(1,99999)","m":"range(1,99999)","ct":{"fa":"General","t":"g"}}},
+          {"r":4,"c":3,"v":{"v":"","m":"","ct":{"fa":"General","t":"g"}}},
+          {"r":5,"c":0,"v":{"v":3001,"m":"3001","ct":{"fa":"General","t":"g"}}},
+          {"r":5,"c":1,"v":{"v":"哥布林","m":"哥布林","ct":{"fa":"General","t":"g"}}},
+          {"r":5,"c":2,"v":{"v":150,"m":"150","ct":{"fa":"General","t":"g"}}},
+          {"r":5,"c":3,"v":{"v":"{\"items\":[{\"id\":1001,\"count\":1,\"rate\":0.5},{\"id\":1002,\"count\":3,\"rate\":0.2}],\"gold\":{\"min\":5,\"max\":20}}","m":"{items:[...], gold:{...}}","ct":{"fa":"General","t":"g"}}},
+          {"r":6,"c":0,"v":{"v":3002,"m":"3002","ct":{"fa":"General","t":"g"}}},
+          {"r":6,"c":1,"v":{"v":"巨魔","m":"巨魔","ct":{"fa":"General","t":"g"}}},
+          {"r":6,"c":2,"v":{"v":800,"m":"800","ct":{"fa":"General","t":"g"}}},
+          {"r":6,"c":3,"v":{"v":"{\"items\":[{\"id\":1005,\"count\":1,\"rate\":0.8}],\"gold\":{\"min\":30,\"max\":100},\"special\":\"装备掉落\"}","m":"{items:[...], gold:{...}, special:...}","ct":{"fa":"General","t":"g"}}},
+          {"r":7,"c":0,"v":{"v":3003,"m":"3003","ct":{"fa":"General","t":"g"}}},
+          {"r":7,"c":1,"v":{"v":"精英哥布林","m":"精英哥布林","ct":{"fa":"General","t":"g"}}},
+          {"r":7,"c":2,"v":{"v":400,"m":"400","ct":{"fa":"General","t":"g"}}},
+          {"r":7,"c":3,"v":{"v":"{\"items\":[{\"id\":1003,\"count\":2,\"rate\":0.3},],\"gold\":{\"min\":15,\"max\":60}}","m":"[尾逗号示例] 打开JSON编辑器后可自动修复","ct":{"fa":"General","t":"g"}}},
+          {"r":8,"c":0,"v":{"v":3004,"m":"3004","ct":{"fa":"General","t":"g"}}},
+          {"r":8,"c":1,"v":{"v":"骷髅兵","m":"骷髅兵","ct":{"fa":"General","t":"g"}}},
+          {"r":8,"c":2,"v":{"v":200,"m":"200","ct":{"fa":"General","t":"g"}}},
+          {"r":8,"c":3,"v":{"v":"{\"items\":[{\"id\":1004,\"count\":1","m":"[不完整JSON] 打开JSON编辑器会显示错误+定位","ct":{"fa":"General","t":"g"}}}
+        ],
+        "config": {
+          "merge": {},
+          "rowlen": {},
+          "columnlen": {"3": 240}
+        }
+      }
+    ]
+  }
+}
