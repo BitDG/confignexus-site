@@ -2,7 +2,7 @@
 
 Ensure correctness and integrity of configuration data. Supports two layers: basic format validation and DSL rule validation.
 
-createtab:Res/zh/templates/数据验证.cnx
+createtab:Res/en/templates/数据验证.cnx
 
 Open the demo file to follow the workflow
 

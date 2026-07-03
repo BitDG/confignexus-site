@@ -8,7 +8,7 @@ Support for Excel 97-2003 format (.xls) import and usage.
 
 File → Import xlsx → Select xls format file for import
 
-video:Res/zh/videos/导入xls.webm|Import xls File
+video:Res/en/videos/导入xls.webm|Import xls File
 
 ### Method 2: Drag and Drop
 

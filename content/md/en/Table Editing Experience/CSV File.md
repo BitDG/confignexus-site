@@ -2,7 +2,7 @@
 
 Support for standard CSV format import and usage with advanced parsing capabilities.
 
-createtab:Res/zh/templates/CSV导入演示.cnx
+createtab:Res/en/templates/CSV导入演示.cnx
 
 ## CSV Import
 
@@ -12,13 +12,13 @@ Two import methods are supported:
 
 File -> Import CSV -> Select a CSV format file for import.
 
-video:Res/zh/videos/导入csv.webm|Import CSV
+video:Res/en/videos/导入csv.webm|Import CSV
 
 ### Method 2: Drag and Drop Import
 
 Drag and drop CSV format files directly into the ConfigNexus interface for import.
 
-video:Res/zh/videos/拖拽csv.webm|Drag and Drop CSV
+video:Res/en/videos/拖拽csv.webm|Drag and Drop CSV
 
 ## Advanced Features
 

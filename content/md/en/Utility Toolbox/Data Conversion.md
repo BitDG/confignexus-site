@@ -2,7 +2,7 @@
 
 Automatically calculate and convert complex multi-data cell content based on mapping table configuration.
 
-createtab:Res/zh/templates/数据转换演示.cnx
+createtab:Res/en/templates/数据转换演示.cnx
 
 ## Feature Overview
 

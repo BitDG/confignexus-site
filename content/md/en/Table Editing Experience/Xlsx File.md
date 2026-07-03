@@ -8,7 +8,7 @@ Support for Excel 2007+ format (.xlsx/.xlsm) import and usage.
 
 File → Import xlsx → Select xlsx/xlsm format file for import
 
-video:Res/zh/videos/导入xlsx.webm|Import xlsx File
+video:Res/en/videos/导入xlsx.webm|Import xlsx File
 
 ### Method 2: Drag and Drop
 

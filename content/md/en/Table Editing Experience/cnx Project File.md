@@ -4,7 +4,7 @@ You save your project as xlsx every day, and every time you reopen it you have t
 
 Click the button below to import a demo project and see right away what a `.cnx` looks like when opened:
 
-createtab:Res/zh/templates/富文本编辑演示.cnx
+createtab:Res/en/templates/富文本编辑演示.cnx
 
 ## How It Differs from .xlsx
 

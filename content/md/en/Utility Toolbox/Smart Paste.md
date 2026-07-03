@@ -2,7 +2,7 @@
 
 Intelligently parse and convert clipboard content into structured spreadsheet data.
 
-createtab:Res/zh/templates/智能粘贴演示.cnx
+createtab:Res/en/templates/智能粘贴演示.cnx
 
 ## Feature Overview
 

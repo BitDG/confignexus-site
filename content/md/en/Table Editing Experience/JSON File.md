@@ -29,13 +29,13 @@ Support for importing and exporting JSON object array format.
 
 File → Import JSON → Select JSON file
 
-video:Res/zh/videos/导入json.webm|Import JSON
+video:Res/en/videos/导入json.webm|Import JSON
 
 ### Method 2: Paste Import
 
 Copied JSON content will be automatically recognized and imported when pasted
 
-video:Res/zh/videos/复制gif.webm|Paste Import JSON
+video:Res/en/videos/复制gif.webm|Paste Import JSON
 
 ## Related Tutorials
 

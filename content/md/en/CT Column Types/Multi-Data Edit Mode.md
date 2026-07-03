@@ -8,7 +8,7 @@ Manage complex multi-data configurations within a single cell, such as reward li
 2. The column is now set as a multi-data editor
 3. Except for the first three rows, double-clicking any cell will open the multi-data editor interface
 
-video: Res/zh/videos/多数据编辑器打开.webm|Open Multi-Data Editor
+video: Res/en/videos/多数据编辑器打开.webm|Open Multi-Data Editor
 
 
 ## Setting Data
@@ -23,11 +23,11 @@ Format: RewardID:Quantity:Weight
 2. Double-click the cell to fill, opening the multi-data editor popup
 3. Right-click on the corresponding column to set column properties, click + to create new columns
 
-video:Res/zh/videos/多数据编辑器设置列.webm|Set Multi-Data Editor Columns
+video:Res/en/videos/多数据编辑器设置列.webm|Set Multi-Data Editor Columns
 
 4. Fill in the corresponding data, click "New Row" to add row data
 
-video:Res/zh/videos/多数据编辑器编辑数据.webm|Edit Multi-Data Editor Data
+video:Res/en/videos/多数据编辑器编辑数据.webm|Edit Multi-Data Editor Data
 
 ## Advanced Operations
 

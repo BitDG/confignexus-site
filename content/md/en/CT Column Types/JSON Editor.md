@@ -5,7 +5,7 @@ A reward config crammed into a cell looks like this: `{"items":[{"id":1001,"rate
 > [!tip]
 > JSON (JavaScript Object Notation, a lightweight data-interchange format) suits nested structures — reward lists, item attributes, level parameters. For simple "object arrays where every entry has a fixed structure," the **Multi-Data Editor** is more intuitive (see [[Multi-Data Edit Mode]]).
 
-createtab:Res/zh/templates/JSON编辑器演示.cnx
+createtab:Res/en/templates/JSON编辑器演示.cnx
 
 ## How to Use
 
@@ -45,7 +45,7 @@ The status bar at the bottom shows in real time whether the JSON is valid — if
 > [!tip]
 > Common small mistakes (trailing commas like `[1,2,]`, single quotes like `{'key':'val'}`) are **auto-repaired first** before opening; only when auto-repair fails does it report an error and pinpoint the problem line. In the demo project, line 7 (Elite Goblin) has a preset trailing comma so you can see the auto-repair in action; line 8 (Skeleton Soldier) is incomplete JSON so you'll see the error being pinpointed.
 
-video:Res/zh/videos/JSON编辑器.webm|Double-click a JSON cell → edit in the Monaco + tree dual view → save back
+video:Res/en/videos/JSON编辑器.webm|Double-click a JSON cell → edit in the Monaco + tree dual view → save back
 
 ## Value-Type Color Coding
 

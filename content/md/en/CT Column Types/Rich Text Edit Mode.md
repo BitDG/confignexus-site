@@ -8,7 +8,7 @@ Notion-like rich text editing experience.
 2. The column is now set as a rich text editor
 3. Except for the first three rows, double-clicking any cell will open the rich text editor interface
 
-video:Res/zh/videos/富文本编辑器-打开.webm|Open Rich Text Editor
+video:Res/en/videos/富文本编辑器-打开.webm|Open Rich Text Editor
 
 ## Rich Text Editing
 
@@ -16,7 +16,7 @@ video:Res/zh/videos/富文本编辑器-打开.webm|Open Rich Text Editor
 
 - Type `/` to create lists, headings, and other structures
 
-video:Res/zh/videos/富文本编辑器-排版.webm|Rich Text Editor Editing
+video:Res/en/videos/富文本编辑器-排版.webm|Rich Text Editor Editing
 
 ## Related Tutorials
 

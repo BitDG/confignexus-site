@@ -23,6 +23,9 @@ window.DOC_MANIFEST = [
   { "id": "table-csv",     "cat": "cat-table",  "dlc": false, "keys": { "zh": "表格编辑体验/csv文件",  "en": "Table Editing Experience/CSV File",  "ja": "表編集体験/CSVファイル",  "ko": "표 편집 경험/CSV 파일" } },
   { "id": "table-cnx",     "cat": "cat-table",  "dlc": false, "keys": { "zh": "表格编辑体验/cnx工程文件", "en": "Table Editing Experience/cnx Project File", "ja": "表編集体験/cnxプロジェクトファイル", "ko": "표 편집 경험/cnx 프로젝트 파일" } },
   { "id": "table-multitab","cat": "cat-table",  "dlc": false, "keys": { "zh": "表格编辑体验/多页签管理", "en": "Table Editing Experience/Multi-tab Management", "ja": "表編集体験/マルチタブ管理", "ko": "표 편집 경험/멀티 탭 관리" } },
+  { "id": "ct-overview",  "cat": "cat-ct",     "dlc": false, "keys": { "zh": "CT列类型/CT系统总览", "en": "CT Column Types/CT System Overview", "ja": null, "ko": null } },
+
+
 
   { "id": "ct-json",       "cat": "cat-ct",     "dlc": false, "keys": { "zh": "CT列类型/JSON编辑器", "en": "CT Column Types/JSON Editor", "ja": "CT列タイプ/JSONエディタ", "ko": "CT 컬럼 유형/JSON 편집기" } },
   { "id": "ct-richtext",   "cat": "cat-ct",     "dlc": false, "keys": { "zh": "CT列类型/富文本编辑", "en": "CT Column Types/Rich Text Edit Mode", "ja": "CT列タイプ/リッチテキスト編集", "ko": "CT 컬럼 유형/리치 텍스트 편집" } },

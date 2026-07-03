@@ -2,7 +2,7 @@
 
 Batch concatenate strings from multiple columns, suitable for generating multilingual key names and resource paths.
 
-createtab:Res/zh/templates/数据拼接演示.cnx
+createtab:Res/en/templates/数据拼接演示.cnx
 
 ## Feature Overview
 

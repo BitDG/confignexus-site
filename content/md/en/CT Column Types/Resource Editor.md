@@ -2,7 +2,7 @@
 
 Professional game resource management and editing features with visual preview capabilities.
 
-createtab:Res/zh/templates/资源编辑演示.cnx
+createtab:Res/en/templates/资源编辑演示.cnx
 
 ## How to Open
 
@@ -22,7 +22,7 @@ createtab:Res/zh/templates/资源编辑演示.cnx
 
 ## Feature Demo
 
-video:Res/zh/videos/资源加载器.webm|Resource Editor
+video:Res/en/videos/资源加载器.webm|Resource Editor
 
 ## Workflow
 

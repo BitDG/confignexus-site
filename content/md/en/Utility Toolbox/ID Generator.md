@@ -2,7 +2,7 @@
 
 Automatically generate unique IDs to avoid manual input duplicates or omissions.
 
-createtab:Res/zh/templates/ID生成器演示.cnx
+createtab:Res/en/templates/ID生成器演示.cnx
 
 ## Feature Overview
 
@@ -24,7 +24,7 @@ createtab:Res/zh/templates/ID生成器演示.cnx
 
 ## Feature Demo
 
-video:Res/zh/videos/ID生成.webm|ID Generation
+video:Res/en/videos/ID生成.webm|ID Generation
 
 ## Generation Modes
 

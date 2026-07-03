@@ -24,6 +24,13 @@
     if (!byCat[it.cat]) { byCat[it.cat] = { cat: it.cat, items: [] }; groups.push(byCat[it.cat]); }
     byCat[it.cat].items.push(it);
     BYID[it.id] = it;
+    if (it.keys) Object.keys(it.keys).forEach(function (l) {
+      var k = it.keys[l];
+      if (!k) return;
+      if (!ALIAS[k]) ALIAS[k] = it.id;
+      var b = base(k);
+      if (b && !ALIAS[b]) ALIAS[b] = it.id;
+    });
     if (it.keys && it.keys.zh) ALIAS[it.keys.zh] = it.id;   // 旧中文 hash 兼容
   });
 
@@ -120,6 +127,12 @@
     // 8) 粗体 / 行内代码
     html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
     html = html.replace(/`([^`]+)`/g, '<code class="nt-code-inline">$1</code>');
+    html = html.replace(/\[\[([^\]]+)\]\]/g, function (m, label) {
+      var text = label.trim();
+      var id = toId(text);
+      if (!id) return escapeHtml(text);
+      return '<a class="nt-link" href="#' + encodeURIComponent(id) + '">' + escapeHtml(text) + '</a>';
+    });
 
     // 9) 段落
     html = html.split('\n\n').map(function (para) {

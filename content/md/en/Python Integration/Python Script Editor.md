@@ -5,7 +5,7 @@
 
 ConfigNexus includes a powerful Python script execution environment, allowing developers to write and execute data processing logic directly within the workbench.
 
-createtab:Res/zh/templates/Python脚本演示.cnx
+createtab:Res/en/templates/Python脚本演示.cnx
 
 ## PY Editor
 

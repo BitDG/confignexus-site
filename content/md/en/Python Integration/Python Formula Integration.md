@@ -33,7 +33,7 @@ It's a different feature from the "Python Script Editor" (hand-written script ba
 
    When A2 = 5, this cell auto-computes 2500. Change A2 → this cell recalculates automatically.
 
-video:Res/zh/videos/公式集成-重算.webm|Register a Python function as a formula → write the formula in a cell → it recalculates automatically when a dependency changes
+video:Res/en/videos/公式集成-重算.webm|Register a Python function as a formula → write the formula in a cell → it recalculates automatically when a dependency changes
 
 ## Register as a Formula
 

@@ -41,9 +41,48 @@
         <a class="btn btn-ghost" href="https://store.steampowered.com/app/4400360/ConfigNexus___AI/" target="_blank" rel="noopener" data-i18n="cta.steam">在 Steam 上查看</a>
       </div>
 
-      <div class="shot reveal d5">
-        <div class="shot-bar"><i></i><i></i><i></i><span class="tt" data-i18n="idx.shotTab">ConfigNexus — 角色配置表.cnx</span></div>
-        <div class="shot-body"><div class="ph" data-i18n="idx.shotPh"><b>软件界面截图占位</b><br>正式上线前换成真实截图</div></div>
+      <div class="shot product-preview reveal d5" aria-label="ConfigNexus 产品界面示意">
+        <div class="preview-rail">
+          <div class="preview-mark"><img src="assets/logo.png" alt=""></div>
+          <span></span><span></span><span></span><span></span>
+        </div>
+        <div class="preview-main">
+          <div class="preview-titlebar">
+            <div>
+              <strong data-i18n="idx.previewFile">角色配置表.cnx</strong>
+              <span data-i18n="idx.previewPath">本地工程 / gameplay / character</span>
+            </div>
+            <div class="preview-actions">
+              <span>JSON</span><span>CSV</span><span>YAML</span>
+            </div>
+          </div>
+          <div class="preview-workspace">
+            <div class="sheet-mock">
+              <div class="sheet-tabs">
+                <span class="active" data-i18n="idx.previewTab1">角色表</span>
+                <span data-i18n="idx.previewTab2">技能表</span>
+                <span data-i18n="idx.previewTab3">掉落表</span>
+              </div>
+              <div class="table-mock" aria-hidden="true">
+                <div class="th">id</div><div class="th">name</div><div class="th">type</div><div class="th">hp</div><div class="th">validate</div>
+                <div>1001</div><div>Guardian</div><div>Tank</div><div>860</div><div class="ok">pass</div>
+                <div>1002</div><div>Ranger</div><div>DPS</div><div>420</div><div class="ok">pass</div>
+                <div>1003</div><div>Mage</div><div>Magic</div><div>360</div><div class="warn">check</div>
+                <div>1004</div><div>Healer</div><div>Support</div><div>390</div><div class="ok">pass</div>
+              </div>
+            </div>
+            <aside class="inspector-mock">
+              <div class="mini-label" data-i18n="idx.previewPanel">数据验证</div>
+              <h3 data-i18n="idx.previewIssue">配置表填错，一行内定位</h3>
+              <p data-i18n="idx.previewDesc">规则、引用、类型同时检查，问题直接回到单元格。</p>
+              <div class="rule-line"><span></span><b>hp &gt; 0 && ref(skill_id)</b></div>
+              <div class="export-stack">
+                <span data-i18n="idx.previewExport">一键导出</span>
+                <strong>JSON / Protobuf / C#</strong>
+              </div>
+            </aside>
+          </div>
+        </div>
       </div>
     </div>
   </section>

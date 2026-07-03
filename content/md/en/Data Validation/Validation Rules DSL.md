@@ -5,7 +5,7 @@ You don't know when an ID column has duplicate IDs, you don't know when an enum 
 > [!tip]
 > DSL (Domain-Specific Language) here is just a short "validation declaration string" — written in the header, concise, version-controllable, and copy-pasteable. It's not a graphical rule builder; it's literally those few characters.
 
-createtab:Res/zh/templates/数据验证测试.cnx
+createtab:Res/en/templates/数据验证测试.cnx
 
 ## 8 Built-in Rules
 

@@ -2,7 +2,7 @@
 
 Dedicated date selection and editing interface to avoid manual date format errors.
 
-createtab:Res/zh/templates/日期编辑演示.cnx
+createtab:Res/en/templates/日期编辑演示.cnx
 
 ## How to Open
 
@@ -10,7 +10,7 @@ createtab:Res/zh/templates/日期编辑演示.cnx
 2. The column is now configured as a date editor
 3. Except for the first three rows of header data, double-clicking any cell in the column will open the date selection panel
 
-video:Res/zh/videos/日期编辑器.webm|Date Editor
+video:Res/en/videos/日期编辑器.webm|Date Editor
 
 ## Feature Overview
 

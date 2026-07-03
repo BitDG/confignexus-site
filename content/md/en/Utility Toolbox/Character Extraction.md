@@ -5,7 +5,7 @@ Your game has thousands of lines of Chinese text that will ultimately be baked i
 > [!tip]
 > **Featured Store tool**: scan all multilingual text in the project → extract the **set of unique characters** → generate `charset.txt`. Used together with [[Font Subsetting]], it can shrink a game font to under 5% of its original size.
 
-createtab:Res/zh/templates/工作流演示.cnx
+createtab:Res/en/templates/工作流演示.cnx
 
 ## What It's For
 

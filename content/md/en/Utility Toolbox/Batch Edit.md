@@ -2,7 +2,7 @@
 
 Edit multiple multi-data cells simultaneously through a dedicated batch editing spreadsheet.
 
-createtab:Res/zh/templates/批量编辑演示.cnx
+createtab:Res/en/templates/批量编辑演示.cnx
 
 ## Feature Overview
 
@@ -23,7 +23,7 @@ createtab:Res/zh/templates/批量编辑演示.cnx
 
 ## Feature Demo
 
-video:Res/zh/videos/批量编辑.webm|Batch Edit
+video:Res/en/videos/批量编辑.webm|Batch Edit
 
 ## Workflow
 

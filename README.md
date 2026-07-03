@@ -28,3 +28,31 @@ ConfigNexus 官方网站，纯静态页面，托管在 GitHub Pages，自定义�
 ## 部署
 
 推送到 GitHub 仓库后，在仓库 **Settings → Pages** 中选择从 `main` 分支根目录发布。DNS 在域名服务商（Spaceship）配置：apex 域名加 A 记录指向 GitHub Pages 的 IP，`www` 加 CNAME 指向 `<用户名>.github.io`。
+
+---
+
+## ConfigNexus Matrix Boundary
+
+This repository owns the public website only: static pages, public docs snapshots, download pages, and public workshop/promo presentation.
+
+Generated/synced areas:
+
+- `content/md`
+- `docs/Res-*`
+- `skills/confignexus-component-dev/references`
+- `docs-data.js`
+- `docs-manifest.js`
+
+Do not edit generated/synced areas directly. Change the source repository and rerun the sync/build script.
+
+Website-owned areas:
+
+- `index.html`
+- `features.html`
+- `download.html`
+- `workshop.html`
+- `site.css`
+- `site.js`
+- `i18n.js`
+
+Cross-repository content must move through sync scripts, not manual copy-paste.
