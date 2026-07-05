@@ -1,12 +1,18 @@
-timeline: v 1.0.2 - Data Validation Enhancements|2026-06-04
-- **Rule humanization (F7)**: Hover a validated row to see a plain-language bubble explaining the rule
-- **Live validation**: Cells are validated as you edit — no need to wait for export
-- **Unique rule**: In-column duplicate checking
+timeline: v 1.0.1 - Import Structure Confirmation and Validation Upgrade|2026-07-05
+- **Import structure confirmation**: When importing Excel / CSV, ConfigNexus scans the first 10 rows so you can confirm field-name, display-name, type, description, validation, and data-start rows
+- **Import structure adaptation**: After confirmation, imported data can be rearranged to match the current table schema
+- **Unified validation rules**: Live validation and the Data Validation panel now use the same rule runner, so counts and locations stay consistent
+- **Field-type auto validation**: Even without a fifth-row validation rule, int / float / bool / List / Dictionary columns are checked from their field types
+- **Onboarding polish**: When live validation is disabled, the guide now sends users to Data Validation logs instead of marking the step complete too early
+- **Welcome copy refresh**: Product positioning now focuses on a data-configuration workflow platform for game developers
 endtimeline
 
-timeline: v 1.0.1 - Export Fill & Rule Completion|2026-06-04
-- **Default value export fill**: Configured default values are auto-filled on export (JSON/CSV/CS/YAML/binary — all formats)
-- **path rule completion (F7 wrap-up)**: Completion for path-type validation rules
+timeline: v 1.0.0 - Steam Release|2026-06-29
+- **Official release**: ConfigNexus is now available as a data-configuration workflow platform for game developers
+- **Table import and project format**: Supports Excel / JSON / CSV / CNX project files while preserving field types, references, and project settings
+- **CT column types**: Includes JSON, rich-text, multi-data, date, and resource editors
+- **Validation and multi-format export**: Supports field types, validation-rule DSL, pre-export checks, and JSON / YAML / CSV / Protobuf / C# / Bytes / MessagePack export
+- **Workflow tools and extension ecosystem**: Includes Python formulas/scripts, multilingual tools, batch editing, file browser, external references, Git / SVN, and Workshop entry points
 endtimeline
 
 timeline: v 0.0.3 - UX & Stability|2026-05-25
