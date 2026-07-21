@@ -8,7 +8,7 @@ ConfigNexus 官方网站，纯静态页面，托管在 GitHub Pages，自定义�
 |------|------|
 | `index.html` | 首页 |
 | `features.html` | 功能介绍 |
-| `download.html` | 下载页（安装包链接占位，待上线后替换） |
+| `download.html` | Windows 试用版与 Steam 完整版下载入口 |
 | `docs.html` | 快速上手文档 |
 | `site.css` | 共用样式（白色玻璃拟态主题，改配色只改这里） |
 | `CNAME` | GitHub Pages 自定义域名绑定（confignexus.org） |
@@ -16,14 +16,14 @@ ConfigNexus 官方网站，纯静态页面，托管在 GitHub Pages，自定义�
 
 ## 本地预览
 
-直接用浏览器打开 `index.html` 即可。无需任何构建步骤。
+无需安装依赖。为确保视频和页内路由行为与线上一致，建议从仓库根目录启动静态服务器后访问 `index.html`。
 
 ## 修改内容
 
 - 改文字：直接编辑对应 `.html` 里的中文。
 - 改配色：编辑 `site.css` 顶部 `:root` 里的颜色变量（如 `--acc` 是主题强调色）。
-- 换软件截图：把 `download.html` / `index.html` 里"软件界面截图占位"那块替换成 `<img>`。
-- 补下载链接：把 `download.html` 里"即将提供下载"的按钮改成真实下载地址。
+- 同步产品截图与视频：运行 `node scripts/sync-promo-assets.mjs`。可用 `CONFIGNEXUS_PROMO_ROOT` 或 `--promo-root=<path>` 指定素材仓库。
+- 验收页面结构和素材引用：运行 `node scripts/check-site.mjs`。
 
 ## 部署
 
@@ -47,6 +47,7 @@ Do not edit generated/synced areas directly. Change the source repository and re
 
 Website-owned areas:
 
+- `content/site-md`
 - `index.html`
 - `features.html`
 - `download.html`
@@ -54,5 +55,7 @@ Website-owned areas:
 - `site.css`
 - `site.js`
 - `i18n.js`
+
+Website-only tutorials belong in `content/site-md`. `build-docs.mjs` merges them with the App snapshot without letting `sync-from-app.mjs` overwrite them.
 
 Cross-repository content must move through sync scripts, not manual copy-paste.

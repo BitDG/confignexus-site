@@ -1,6 +1,6 @@
 // 生成 docs-data.js：把四语教程 Markdown 打包成一个 JS 对象，供官网文档页离线渲染
-// （避免 file:// 下 fetch 被浏览器拦截）。Markdown 源是站点自带的 content/md（App 上游的
-// 可编辑快照，由 sync-from-app.mjs 单向同步）；媒体已提交在 docs/Res-*，构建不再外拷。
+// （避免 file:// 下 fetch 被浏览器拦截）。Markdown 源包括 App 同步快照 content/md，
+// 以及仅由官网维护的 content/site-md；媒体已提交在 docs/Res-*，构建不再外拷。
 // 构建先做一致性 + 媒体引用校验，失败则非零退出且不写产物，通过后才写 docs-data.js。
 // 用法：node build-docs.mjs
 import { readdirSync, readFileSync, writeFileSync, statSync, existsSync } from 'fs';
@@ -9,6 +9,7 @@ import { fileURLToPath } from 'url';
 
 const ROOT = dirname(fileURLToPath(import.meta.url));   // 仓库根（脚本所在目录），不写死绝对路径
 const CONTENT_MD = join(ROOT, 'content', 'md');
+const SITE_MD = join(ROOT, 'content', 'site-md');
 const LANGS = ['zh', 'en', 'ja', 'ko'];
 
 // 已知历史缺失媒体白名单：site 与 App 上游均无此文件，降级为 WARN 不阻断构建。
@@ -30,9 +31,11 @@ function walk(dir, base, out) {
 
 const DOCS = {};
 for (const lang of LANGS) {
-  const base = join(CONTENT_MD, lang);
   const out = {};
-  if (existsSync(base)) walk(base, base, out);
+  for (const root of [CONTENT_MD, SITE_MD]) {
+    const base = join(root, lang);
+    if (existsSync(base)) walk(base, base, out);
+  }
   DOCS[lang] = out;
 }
 

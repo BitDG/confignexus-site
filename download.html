@@ -6,11 +6,11 @@
 <link rel="icon" type="image/png" href="assets/logo.png">
 <title data-i18n="dl.title">下载 · ConfigNexus</title>
 <meta name="description" data-i18n="dl.desc" content="下载 ConfigNexus 桌面端配置管理工具（Windows）。">
-<script src="i18n.js"></script>
+  <script src="i18n.js?v=20260721-steam-demo"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="site.css">
+  <link rel="stylesheet" href="site.css?v=20260721-steam-demo">
 </head>
 <body>
 <div class="bg">
@@ -27,6 +27,10 @@
       <a href="docs.html" data-i18n="nav.docs">文档</a>
       <a class="nav-cta" href="https://store.steampowered.com/app/4400360/ConfigNexus___AI/" target="_blank" rel="noopener">Steam</a>
     </nav>
+    <details class="mobile-menu">
+      <summary data-i18n="nav.menu">菜单</summary>
+      <div class="mobile-menu-panel"><a href="features.html" data-i18n="nav.features">功能</a><a href="workshop.html" data-i18n="nav.workshop">创意工坊</a><a class="active" href="download.html" data-i18n="nav.download">下载</a><a href="docs.html" data-i18n="nav.docs">文档</a><a href="https://store.steampowered.com/app/4400360/ConfigNexus___AI/" target="_blank" rel="noopener">Steam</a></div>
+    </details>
   </div>
 </header>
 
@@ -42,17 +46,16 @@
   <section class="wrap">
     <div class="dl-hero">
       <div class="dl-card glasscard reveal d3">
-        <div class="ver" data-i18n="dl.ver">最新版本 · v1.0.0</div>
+        <div class="ver" data-i18n="dl.ver">Windows 桌面版</div>
         <h2>ConfigNexus for Windows</h2>
-        <div class="cta-row" style="margin-top:6px">
-          <a class="btn btn-primary" href="https://digua123.itch.io/confignexusai" target="_blank" rel="noopener" data-i18n="dl.btnTrial">↓ 下载试用版（itch.io）</a>
-          <a class="btn btn-ghost" href="https://store.steampowered.com/app/4400360?beta=0" target="_blank" rel="noopener" data-i18n="dl.btnSteam">在 Steam 上获取</a>
+        <div class="download-choices">
+          <div class="download-choice recommended steam-download-choice"><span data-i18n="dl.trialTag">Steam 官方入口</span><h3 data-i18n="dl.trialH">Steam 版（含免费试玩）</h3><p data-i18n="dl.trialP">在同一 Steam 商店页免费试玩；需要完整功能时可直接获取完整版。</p><a class="btn btn-primary" href="https://store.steampowered.com/app/4400360/ConfigNexus___AI/" target="_blank" rel="noopener" data-i18n="dl.btnSteam">在 Steam 免费试玩 / 获取完整版</a><a class="itch-fallback" href="https://digua123.itch.io/confignexusai" target="_blank" rel="noopener" data-i18n="dl.itchFallback">也可以从 itch.io 下载试用版 →</a></div>
         </div>
-        <p class="note" data-i18n="dl.note">试用版托管在 itch.io，点上面按钮可直接下载体验；完整版在 Steam 上获取。</p>
+        <p class="note" data-i18n="dl.note">免费试玩与完整版都在同一 Steam 商店页；itch.io 仅作为备用下载。</p>
         <div class="dl-meta">
           <div><div class="k" data-i18n="dl.k1">系统</div><div class="v" data-i18n="dl.v1">Windows 10 / 11</div></div>
           <div><div class="k" data-i18n="dl.k2">架构</div><div class="v" data-i18n="dl.v2">64 位</div></div>
-          <div><div class="k" data-i18n="dl.k3">安装方式</div><div class="v" data-i18n="dl.v3">NSIS 安装程序</div></div>
+          <div><div class="k" data-i18n="dl.k3">安装方式</div><div class="v" data-i18n="dl.v3">Steam 客户端</div></div>
         </div>
       </div>
     </div>
@@ -60,13 +63,13 @@
     <div class="steps">
       <div class="step glasscard reveal d4">
         <div class="n">1</div>
-        <h4 data-i18n="dl.s1h">下载安装包</h4>
-        <p data-i18n="dl.s1p">点击上方按钮下载 Windows 安装程序（上线后提供）。</p>
+        <h4 data-i18n="dl.s1h">打开 Steam 商店页</h4>
+        <p data-i18n="dl.s1p">前往 Steam 免费试玩，或在同一页面获取完整版。</p>
       </div>
       <div class="step glasscard reveal d4">
         <div class="n">2</div>
-        <h4 data-i18n="dl.s2h">运行安装</h4>
-        <p data-i18n="dl.s2p">双击安装程序，按提示完成安装。若系统提示来源未知，选择仍要运行即可。</p>
+        <h4 data-i18n="dl.s2h">通过 Steam 安装</h4>
+        <p data-i18n="dl.s2p">选择试玩版或完整版后，Steam 客户端会自动完成下载、安装和后续更新。</p>
       </div>
       <div class="step glasscard reveal d5">
         <div class="n">3</div>

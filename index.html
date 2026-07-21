@@ -6,11 +6,11 @@
 <link rel="icon" type="image/png" href="assets/logo.png">
 <title data-i18n="idx.title">ConfigNexus · 面向游戏开发者的数据配置工作流平台</title>
 <meta name="description" data-i18n="idx.desc" content="支持字段类型、数据校验、Excel 导入与多格式导出；内置富文本、多数据、JSON 编辑器和文件浏览器，让配置填写、检查、导出和协作更高效、更少出错。">
-<script src="i18n.js"></script>
+<script src="i18n.js?v=20260720-real-proof"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="site.css">
+<link rel="stylesheet" href="site.css?v=20260720-real-proof">
 </head>
 <body>
 <div class="bg">
@@ -27,96 +27,123 @@
       <a href="docs.html" data-i18n="nav.docs">文档</a>
       <a class="nav-cta" href="https://store.steampowered.com/app/4400360/ConfigNexus___AI/" target="_blank" rel="noopener">Steam</a>
     </nav>
+    <details class="mobile-menu">
+      <summary data-i18n="nav.menu">菜单</summary>
+      <div class="mobile-menu-panel">
+        <a href="features.html" data-i18n="nav.features">功能</a>
+        <a href="workshop.html" data-i18n="nav.workshop">创意工坊</a>
+        <a href="download.html" data-i18n="nav.download">下载</a>
+        <a href="docs.html" data-i18n="nav.docs">文档</a>
+        <a href="https://store.steampowered.com/app/4400360/ConfigNexus___AI/" target="_blank" rel="noopener">Steam</a>
+      </div>
+    </details>
   </div>
 </header>
 
 <main>
   <section class="hero">
     <div class="wrap">
-      <div class="eyebrow reveal d2"><span class="dot"></span><span data-i18n="idx.eyebrow">游戏数据配置工作流平台</span></div>
-      <h1 class="hero-h reveal d2" data-i18n="idx.heroH">面向游戏开发者的<br><span class="hl">数据配置工作流平台</span></h1>
-      <p class="sub reveal d3" data-i18n="idx.sub">支持字段类型、数据校验、Excel 导入与多格式导出；内置富文本、多数据、JSON 编辑器和文件浏览器，让配置填写、检查、导出和协作更高效、更少出错。</p>
+      <div class="eyebrow reveal d2"><span class="dot"></span><span data-i18n="idx.eyebrow">给游戏策划与开发者的配置工作台</span></div>
+      <h1 class="hero-h reveal d2" data-i18n="idx.heroH">从 Excel 到游戏引擎，<br><span class="hl">配置数据少出错、好维护</span></h1>
+      <p class="sub reveal d3" data-i18n="idx.sub">导入 xlsx / xls / json / csv，用熟悉的表格方式编辑；字段类型、引用和规则即时检查，再导出 JSON、Protobuf、C# 等工程格式。</p>
       <div class="cta-row reveal d4">
-        <a class="btn btn-primary" href="download.html" data-i18n="cta.download">↓ 免费下载</a>
-        <a class="btn btn-ghost" href="https://store.steampowered.com/app/4400360/ConfigNexus___AI/" target="_blank" rel="noopener" data-i18n="cta.steam">在 Steam 上查看</a>
+        <a class="btn btn-primary" href="download.html" data-i18n="cta.download">↓ 下载 Windows 试用版</a>
+        <a class="btn btn-ghost" href="#demo" data-i18n="cta.demo">观看 30 秒演示</a>
       </div>
-
-      <div class="shot product-preview reveal d5" aria-label="ConfigNexus 产品界面示意">
-        <div class="preview-rail">
-          <div class="preview-mark"><img src="assets/logo.png" alt=""></div>
-          <span></span><span></span><span></span><span></span>
-        </div>
-        <div class="preview-main">
-          <div class="preview-titlebar">
-            <div>
-              <strong data-i18n="idx.previewFile">角色配置表.cnx</strong>
-              <span data-i18n="idx.previewPath">本地工程 / gameplay / character</span>
-            </div>
-            <div class="preview-actions">
-              <span>JSON</span><span>CSV</span><span>YAML</span>
-            </div>
-          </div>
-          <div class="preview-workspace">
-            <div class="sheet-mock">
-              <div class="sheet-tabs">
-                <span class="active" data-i18n="idx.previewTab1">角色表</span>
-                <span data-i18n="idx.previewTab2">技能表</span>
-                <span data-i18n="idx.previewTab3">掉落表</span>
-              </div>
-              <div class="table-mock" aria-hidden="true">
-                <div class="th">id</div><div class="th">name</div><div class="th">type</div><div class="th">hp</div><div class="th">validate</div>
-                <div>1001</div><div>Guardian</div><div>Tank</div><div>860</div><div class="ok">pass</div>
-                <div>1002</div><div>Ranger</div><div>DPS</div><div>420</div><div class="ok">pass</div>
-                <div>1003</div><div>Mage</div><div>Magic</div><div>360</div><div class="warn">check</div>
-                <div>1004</div><div>Healer</div><div>Support</div><div>390</div><div class="ok">pass</div>
-              </div>
-            </div>
-            <aside class="inspector-mock">
-              <div class="mini-label" data-i18n="idx.previewPanel">数据验证</div>
-              <h3 data-i18n="idx.previewIssue">配置表填错，一行内定位</h3>
-              <p data-i18n="idx.previewDesc">规则、引用、类型同时检查，问题直接回到单元格。</p>
-              <div class="rule-line"><span></span><b>hp &gt; 0 && ref(skill_id)</b></div>
-              <div class="export-stack">
-                <span data-i18n="idx.previewExport">一键导出</span>
-                <strong>JSON / Protobuf / C#</strong>
-              </div>
-            </aside>
-          </div>
-        </div>
+      <div class="product-media hero-media reveal d5" id="demo" data-product-demo>
+        <video controls muted playsinline preload="metadata" poster="assets/product/campaign-poster.png" aria-label="ConfigNexus 30 秒产品演示">
+          <source src="assets/product/overview-zh.mp4" type="video/mp4">
+        </video>
+        <div class="media-caption"><span data-i18n="idx.demoCaption">真实产品界面 · 30 秒了解完整配置流程</span><strong>ConfigNexus</strong></div>
       </div>
     </div>
   </section>
 
-  <section class="formats">
+  <section class="formats proof-strip" aria-label="ConfigNexus 核心工作流">
     <div class="wrap">
-      <div class="lbl" data-i18n="idx.formatsLbl">一份数据 · 多种导出格式</div>
-      <div class="fmt-row">
-        <span class="fmt">JSON</span><span class="fmt">CSV</span><span class="fmt">YAML</span>
-        <span class="fmt">C#</span><span class="fmt">Binary</span><span class="fmt">Protobuf</span>
-        <span class="fmt">MessagePack</span>
+      <div class="lbl" data-i18n="idx.proofLabel">一条可验证的配置工作流</div>
+      <div class="proof-row">
+        <span data-i18n="idx.proofImport">导入 xlsx / xls / json / csv</span>
+        <span data-i18n="idx.proofEdit">表格与结构化编辑</span>
+        <span data-i18n="idx.proofValidate">类型、规则与引用校验</span>
+        <span data-i18n="idx.proofExport">导出工程格式</span>
       </div>
     </div>
   </section>
 
-  <section class="section" id="features">
+  <section class="section workflow-section" id="workflow">
     <div class="wrap">
       <div class="sec-head">
-        <div class="tag" data-i18n="idx.coreTag">核心能力</div>
-        <h2 data-i18n="idx.coreH">为配置工作而生</h2>
+        <div class="tag" data-i18n="idx.coreTag">核心工作流</div>
+        <h2 data-i18n="idx.workflowH">一张表，从拿到手到交给引擎</h2>
+        <p class="section-lead" data-i18n="idx.workflowP">每一步都发生在真实产品里：保留原始数据结构，编辑时发现问题，按项目需要导出。</p>
+      </div>
+      <div class="workflow-list">
+        <article class="workflow-item">
+          <div class="workflow-copy"><span class="step-no">01</span><h3 data-i18n="idx.flow1t">导入，不用重做数据</h3><p data-i18n="idx.flow1d">把现有 xlsx、xls、json、csv 直接带进来，继续用熟悉的表格方式工作。</p><a href="features.html#core-workflow" data-i18n="idx.learnMore">查看核心工作流 →</a></div>
+          <div class="proof-visual" data-real-proof>
+            <div class="product-media"><video controls muted playsinline preload="metadata" poster="assets/product/real/poster-import.png"><source src="assets/product/multi-format-import.mp4" type="video/mp4"></video><div class="media-caption" data-i18n="proof.realLabel">真实操作全程</div></div>
+            <figure class="focus-detail"><img src="assets/product/real/focus-import.png" alt="ConfigNexus 导入菜单局部放大" loading="lazy"><figcaption data-i18n="proof.focusLabel">关键区域放大 · 来自同一条真实录屏</figcaption></figure>
+          </div>
+        </article>
+        <article class="workflow-item reverse">
+          <div class="workflow-copy"><span class="step-no">02</span><h3 data-i18n="idx.flow2t">编辑，结构就在单元格里</h3><p data-i18n="idx.flow2d">表格、多页签、JSON 和 CT 列类型协同工作，复杂配置不再拆成零散工具。</p><a href="docs.html#ct-json" data-i18n="idx.openDocs">打开对应文档 →</a></div>
+          <div class="proof-visual" data-real-proof>
+            <div class="product-media"><video controls muted playsinline preload="metadata" poster="assets/product/real/poster-batch-edit.png"><source src="assets/product/real/batch-edit.webm" type="video/webm"></video><div class="media-caption" data-i18n="proof.realLabel">真实操作全程</div></div>
+            <figure class="focus-detail"><img src="assets/product/real/focus-batch-edit.png" alt="ConfigNexus 批量编辑结果局部放大" loading="lazy"><figcaption data-i18n="proof.focusLabel">关键区域放大 · 来自同一条真实录屏</figcaption></figure>
+          </div>
+        </article>
+        <article class="workflow-item">
+          <div class="workflow-copy"><span class="step-no">03</span><h3 data-i18n="idx.flow3t">校验，问题留在上线之前</h3><p data-i18n="idx.flow3d">字段类型、规则和跨表引用即时检查，错误回到具体数据位置处理。</p><a href="docs.html#valid-dsl" data-i18n="idx.openDocs">打开对应文档 →</a></div>
+          <div class="proof-visual" data-real-proof>
+            <div class="product-media"><video controls muted playsinline preload="metadata" poster="assets/product/real/poster-validation-dsl.png"><source src="assets/product/real/validation-dsl.webm" type="video/webm"></video><div class="media-caption" data-i18n="proof.realLabel">真实操作全程</div></div>
+            <figure class="focus-detail"><img src="assets/product/real/focus-validation-dsl.png" alt="ConfigNexus 验证规则结果局部放大" loading="lazy"><figcaption data-i18n="proof.focusLabel">关键区域放大 · 来自同一条真实录屏</figcaption></figure>
+          </div>
+        </article>
+        <article class="workflow-item reverse">
+          <div class="workflow-copy"><span class="step-no">04</span><h3 data-i18n="idx.flow4t">导出，接进你的工程</h3><p data-i18n="idx.flow4d">按项目需要输出 JSON、Protobuf、C#、Bytes、MessagePack 等格式。</p><a href="docs.html#export-data" data-i18n="idx.openDocs">打开对应文档 →</a></div>
+          <div class="proof-visual" data-real-proof>
+            <div class="product-media"><video controls muted playsinline preload="metadata" poster="assets/product/real/poster-export-data.png"><source src="assets/product/real/export-data.webm" type="video/webm"></video><div class="media-caption" data-i18n="proof.realLabel">真实操作全程</div></div>
+            <figure class="focus-detail"><img src="assets/product/real/focus-export-data.png" alt="ConfigNexus 导出选项局部放大" loading="lazy"><figcaption data-i18n="proof.focusLabel">关键区域放大 · 来自同一条真实录屏</figcaption></figure>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="advanced">
+    <div class="wrap">
+      <div class="sec-head"><div class="tag" data-i18n="idx.advancedTag">进阶能力</div><h2 data-i18n="idx.advancedH">配置变复杂，工具也跟得上</h2></div>
+      <div class="cards">
+        <a class="card" href="features.html#engineering"><div class="ic">🐍</div><h3 data-i18n="idx.c5t">Python 深度集成</h3><p data-i18n="idx.c5d">单元格里调 Python 函数，SmartCache + 批量执行，沙箱脚本编辑器。</p></a>
+        <a class="card" href="features.html#extensions"><div class="ic">🕸️</div><h3 data-i18n="idx.referenceT">看清跨表引用</h3><p data-i18n="idx.referenceD">把外部数据源与引用关系画出来，定位配置依赖。</p></a>
+        <a class="card" href="workshop.html"><div class="ic">🏪</div><h3 data-i18n="idx.c6t">扩展生态 · 创意工坊</h3><p data-i18n="idx.c6d">外部引用源、引用关系图、Git/SVN、Steam 创意工坊订阅与上传。</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section ai-home-section">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="tag" data-i18n="idx.aiTag">AI 扩展能力</div>
+        <h2 data-i18n="idx.aiH">让重复的配置工作交给 AI</h2>
+        <p class="section-lead" data-i18n="idx.aiP">按需连接本地或远程模型，用自然语言完成内容生成、翻译和工作表操作；原有编辑、验证与导出流程保持不变。</p>
       </div>
       <div class="cards">
-        <a class="card" href="features.html"><div class="ic">📊</div><h3 data-i18n="idx.c1t">专业表格编辑</h3>
-          <p data-i18n="idx.c1d">xlsx/xls/json/csv 全格式导入，Luckysheet 内核手感，多页签预渲染秒切。</p></a>
-        <a class="card" href="features.html"><div class="ic">🧩</div><h3 data-i18n="idx.c2t">CT 列类型系统</h3>
-          <p data-i18n="idx.c2d">JSON 编辑器、富文本、多数据结构、日期、资源加载器，列即类型。</p></a>
-        <a class="card" href="features.html"><div class="ic">✅</div><h3 data-i18n="idx.c3t">数据验证 DSL</h3>
-          <p data-i18n="idx.c3d">8 条规则 + && 组合，表头一行写完；跨表引用外键完整性校验。</p></a>
-        <a class="card" href="features.html"><div class="ic">📤</div><h3 data-i18n="idx.c4t">多样化导出</h3>
-          <p data-i18n="idx.c4d">JSON / YAML / CSV / Protobuf / C# 类 / Bytes / MessagePack 8 种格式。</p></a>
-        <a class="card" href="features.html"><div class="ic">🐍</div><h3 data-i18n="idx.c5t">Python 深度集成</h3>
-          <p data-i18n="idx.c5d">单元格里调 Python 函数，SmartCache + 批量执行，沙箱脚本编辑器。</p></a>
-        <a class="card" href="features.html"><div class="ic">🏪</div><h3 data-i18n="idx.c6t">扩展生态 · 创意工坊</h3>
-          <p data-i18n="idx.c6d">外部引用源、引用关系图、Git/SVN、Steam 创意工坊订阅与上传。</p></a>
+        <a class="card" href="docs.html#ai-chat"><div class="ic">💬</div><h3 data-i18n="idx.aiC1t">对话与内容生成</h3><p data-i18n="idx.aiC1d">生成配置内容和结构化表格，并直接创建为新工作表。</p><small class="mod-note" data-i18n="ai.modNote">需要安装 AI Mod</small></a>
+        <a class="card" href="docs.html#ai-translate"><div class="ic">🌐</div><h3 data-i18n="idx.aiC2t">翻译与文本处理</h3><p data-i18n="idx.aiC2d">批量翻译多语言列、生成英文字段并按指定语气润色文本。</p><small class="mod-note" data-i18n="ai.modNote">需要安装 AI Mod</small></a>
+        <a class="card" href="docs.html#ai-worksheet"><div class="ic">✨</div><h3 data-i18n="idx.aiC3t">自然语言操作表格</h3><p data-i18n="idx.aiC3d">通过文字指令增删行列、填写区域、清空内容或调整格式。</p><small class="mod-note" data-i18n="ai.modNote">需要安装 AI Mod</small></a>
+      </div>
+      <div class="product-media ai-demo"><video autoplay muted loop playsinline preload="metadata"><source src="assets/product/ai-worksheet.webm" type="video/webm"></video><div class="media-caption"><span data-i18n="idx.aiDemoCaption">用自然语言操作真实工作表</span><small class="mod-note" data-i18n="ai.modNote">需要安装 AI Mod</small></div></div>
+    </div>
+  </section>
+
+  <section class="section ecosystem-section">
+    <div class="wrap">
+      <div class="sec-head"><div class="tag" data-i18n="idx.ecoTag">工程与生态</div><h2 data-i18n="idx.ecoH">从一张表，走向整个项目</h2></div>
+      <div class="media-pair">
+        <figure class="product-media"><img src="assets/product/reference-graph.png" alt="ConfigNexus 引用关系图" loading="lazy"><figcaption data-i18n="idx.ecoRef">引用关系图：追踪跨表依赖</figcaption></figure>
+        <figure class="product-media"><img src="assets/product/script-library.png" alt="ConfigNexus Python 脚本库" loading="lazy"><figcaption data-i18n="idx.ecoScript">脚本库：复用项目自动化</figcaption></figure>
       </div>
     </div>
   </section>
@@ -125,8 +152,8 @@
     <div class="wrap">
       <div class="endcta">
         <h2 data-i18n="idx.endH">把配置表交给 ConfigNexus</h2>
-        <p data-i18n="idx.endP">免费下载，立即开始管理你的配置数据。</p>
-        <a class="btn btn-primary" href="download.html" data-i18n="cta.download">↓ 免费下载</a>
+        <p data-i18n="idx.endP">先从 Windows 试用版跑通第一张配置表；需要完整版本时再前往 Steam。</p>
+        <a class="btn btn-primary" href="download.html" data-i18n="cta.download">↓ 下载 Windows 试用版</a>
       </div>
     </div>
   </section>

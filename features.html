@@ -6,11 +6,11 @@
 <link rel="icon" type="image/png" href="assets/logo.png">
 <title data-i18n="feat.title">功能 · ConfigNexus</title>
 <meta name="description" data-i18n="feat.desc" content="ConfigNexus 的核心能力：AI 助手、专业表格编辑、CT 列类型、数据验证 DSL、多格式导出、Python 集成、实用工具箱、扩展生态。">
-<script src="i18n.js"></script>
+  <script src="i18n.js?v=20260720-real-proof"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="site.css">
+  <link rel="stylesheet" href="site.css?v=20260720-real-proof">
 </head>
 <body>
 <div class="bg"><div class="grid"></div></div>
@@ -25,6 +25,16 @@
       <a href="docs.html" data-i18n="nav.docs">文档</a>
       <a class="nav-cta" href="https://store.steampowered.com/app/4400360/ConfigNexus___AI/" target="_blank" rel="noopener">Steam</a>
     </nav>
+    <details class="mobile-menu">
+      <summary data-i18n="nav.menu">菜单</summary>
+      <div class="mobile-menu-panel">
+        <a class="active" href="features.html" data-i18n="nav.features">功能</a>
+        <a href="workshop.html" data-i18n="nav.workshop">创意工坊</a>
+        <a href="download.html" data-i18n="nav.download">下载</a>
+        <a href="docs.html" data-i18n="nav.docs">文档</a>
+        <a href="https://store.steampowered.com/app/4400360/ConfigNexus___AI/" target="_blank" rel="noopener">Steam</a>
+      </div>
+    </details>
   </div>
 </header>
 
@@ -37,18 +47,20 @@
     </div>
   </section>
 
-  <section class="section" style="padding-top:30px">
-    <div class="wrap">
-      <div class="sec-head"><div class="tag" data-i18n="feat.s1tag">AI 智能助手</div><h2 data-i18n="feat.s1h">本地大模型，数据不出本机</h2></div>
-      <div class="cards">
-        <a class="card" href="docs.html"><div class="ic">🤖</div><h3 data-i18n="feat.s1c1t">本地 AI 接入</h3><p data-i18n="feat.s1c1d">接入 Ollama / LM Studio / 远程接口，按平台插件化扩展，宿主零改动。</p></a>
-        <a class="card" href="docs.html"><div class="ic">🔒</div><h3 data-i18n="feat.s1c2t">隐私优先</h3><p data-i18n="feat.s1c2d">AI 全程在本机运行，敏感配置数据不上传到任何外部服务。</p></a>
-        <a class="card" href="docs.html"><div class="ic">✍️</div><h3 data-i18n="feat.s1c3t">辅助填表与翻译</h3><p data-i18n="feat.s1c3d">AI 辅助批量填写、多语言翻译、内容生成，重复劳动交给它。</p></a>
-      </div>
+  <nav class="feature-jump wrap reveal d4" aria-label="功能分组">
+    <a href="#core-workflow" data-i18n="feat.groupCore">核心工作流</a>
+    <a href="#engineering" data-i18n="feat.groupEngineering">效率与工程</a>
+    <a href="#extensions" data-i18n="feat.groupExtensions">扩展能力</a>
+  </nav>
+
+  <section class="section feature-group-intro" id="core-workflow">
+    <div class="wrap feature-group-grid">
+      <div><div class="tag" data-i18n="feat.groupCore">核心工作流</div><h2 data-i18n="feat.groupCoreH">导入、编辑、校验、导出，一条链路完成</h2><p data-i18n="feat.groupCoreP">从已有数据开始，在同一个工作台中整理结构、发现问题，再交付给游戏工程。</p></div>
+      <div class="product-media"><video autoplay muted loop playsinline preload="metadata"><source src="assets/product/multi-format-import.mp4" type="video/mp4"></video></div>
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" style="padding-top:30px">
     <div class="wrap">
       <div class="sec-head"><div class="tag" data-i18n="feat.s2tag">专业表格编辑</div><h2 data-i18n="feat.s2h">像 Excel 一样顺手，比 Excel 更懂配置</h2></div>
       <div class="cards">
@@ -91,6 +103,13 @@
     </div>
   </section>
 
+  <section class="section feature-group-intro" id="engineering">
+    <div class="wrap feature-group-grid">
+      <div><div class="tag" data-i18n="feat.groupEngineering">效率与工程</div><h2 data-i18n="feat.groupEngineeringH">把重复处理沉淀成项目能力</h2><p data-i18n="feat.groupEngineeringP">用 Python、批量工具和脚本库处理规模化配置工作。</p></div>
+      <figure class="product-media"><img src="assets/product/script-library.png" alt="ConfigNexus Python 脚本库" loading="lazy"></figure>
+    </div>
+  </section>
+
   <section class="section">
     <div class="wrap">
       <div class="sec-head"><div class="tag" data-i18n="feat.s6tag">Python 集成</div><h2 data-i18n="feat.s6h">把脚本能力嵌进表格</h2></div>
@@ -115,6 +134,13 @@
     </div>
   </section>
 
+  <section class="section feature-group-intro" id="extensions">
+    <div class="wrap feature-group-grid">
+      <div><div class="tag" data-i18n="feat.groupExtensions">扩展能力</div><h2 data-i18n="feat.groupExtensionsH">连接项目、团队与可选 AI</h2><p data-i18n="feat.groupExtensionsP">引用图、版本控制、创意工坊和 AI Mod 按项目需要接入。</p></div>
+      <figure class="product-media"><img src="assets/product/reference-graph.png" alt="ConfigNexus 引用关系图" loading="lazy"></figure>
+    </div>
+  </section>
+
   <section class="section">
     <div class="wrap">
       <div class="sec-head"><div class="tag" data-i18n="feat.s8tag">扩展生态 · Steam 创意工坊</div><h2 data-i18n="feat.s8h">能力随需求生长</h2></div>
@@ -125,6 +151,36 @@
         <a class="card" href="docs.html#ext-workshop"><div class="ic">🏪</div><h3 data-i18n="feat.s8c4t">创意工坊</h3><p data-i18n="feat.s8c4d">订阅 / 上传组件，社区共建。</p></a>
         <a class="card" href="docs.html#ext-scm"><div class="ic">🌿</div><h3 data-i18n="feat.s8c5t">Git / SVN</h3><p data-i18n="feat.s8c5d">内置源代码面板，commit / pull / branch。</p></a>
         <a class="card" href="docs.html#ext-diff"><div class="ic">📊</div><h3 data-i18n="feat.s8c6t">数据表对比</h3><p data-i18n="feat.s8c6d">逐单元格 diff，字符级高亮（DLC）。</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section real-proof-section" id="real-recordings">
+    <div class="wrap">
+      <div class="sec-head"><div class="tag" data-i18n="proof.realLabel">真实操作全程</div><h2 data-i18n="proof.realTitle">看真实操作，也看清关键结果</h2><p class="section-lead" data-i18n="proof.realDesc">每段视频都来自最新真实录制脚本；信息密集的区域同时提供同源局部放大图。</p></div>
+      <div class="real-proof-grid">
+        <article class="real-proof-card" data-real-proof><h3 data-i18n="feat.s8c1t">文件浏览器</h3><p data-i18n="feat.s8c1d">独立窗口树 + 角标 + 引用入口。</p><div class="proof-visual"><div class="product-media"><video controls muted playsinline preload="metadata" poster="assets/product/real/poster-file-browser.png"><source src="assets/product/real/file-browser.webm" type="video/webm"></video></div><figure class="focus-detail"><img src="assets/product/real/focus-file-browser.png" alt="文件浏览器操作结果局部放大" loading="lazy"><figcaption data-i18n="proof.focusLabel">关键区域放大 · 来自同一条真实录屏</figcaption></figure></div></article>
+        <article class="real-proof-card" data-real-proof><h3 data-i18n="feat.s6c3t">持久化脚本库</h3><p data-i18n="feat.s6c3d">跨项目复用，工坊可分享。</p><div class="proof-visual"><div class="product-media"><video controls muted playsinline preload="metadata" poster="assets/product/real/poster-script-library.png"><source src="assets/product/real/script-library.webm" type="video/webm"></video></div><figure class="focus-detail"><img src="assets/product/real/focus-script-library.png" alt="脚本库操作结果局部放大" loading="lazy"><figcaption data-i18n="proof.focusLabel">关键区域放大 · 来自同一条真实录屏</figcaption></figure></div></article>
+        <article class="real-proof-card" data-real-proof><h3 data-i18n="feat.s8c2t">外部引用源</h3><p data-i18n="feat.s8c2d">跨项目挂表，跨表查值。</p><div class="proof-visual"><div class="product-media"><video controls muted playsinline preload="metadata" poster="assets/product/real/poster-external-reference.png"><source src="assets/product/real/external-reference.webm" type="video/webm"></video></div><figure class="focus-detail"><img src="assets/product/real/focus-external-reference.png" alt="外部引用源配置局部放大" loading="lazy"><figcaption data-i18n="proof.focusLabel">关键区域放大 · 来自同一条真实录屏</figcaption></figure></div></article>
+        <article class="real-proof-card" data-real-proof><h3 data-i18n="feat.s8c3t">引用关系图</h3><p data-i18n="feat.s8c3d">可视化「谁引用谁」。</p><div class="proof-visual"><div class="product-media"><video controls muted playsinline preload="metadata" poster="assets/product/real/poster-reference-graph.png"><source src="assets/product/real/reference-graph.webm" type="video/webm"></video></div><figure class="focus-detail"><img src="assets/product/real/focus-reference-graph.png" alt="引用关系图局部放大" loading="lazy"><figcaption data-i18n="proof.focusLabel">关键区域放大 · 来自同一条真实录屏</figcaption></figure></div></article>
+        <article class="real-proof-card" data-real-proof><h3 data-i18n="feat.s8c6t">数据表对比</h3><p data-i18n="feat.s8c6d">逐单元格 diff，字符级高亮（DLC）。</p><div class="proof-visual"><div class="product-media"><video controls muted playsinline preload="metadata" poster="assets/product/real/poster-table-diff.png"><source src="assets/product/real/table-diff.webm" type="video/webm"></video></div><figure class="focus-detail"><img src="assets/product/real/focus-table-diff.png" alt="数据表对比结果局部放大" loading="lazy"><figcaption data-i18n="proof.focusLabel">关键区域放大 · 来自同一条真实录屏</figcaption></figure></div></article>
+        <article class="real-proof-card" data-real-proof><h3 data-i18n="proof.exportPathTitle">导出路径配置</h3><p data-i18n="proof.exportPathDesc">把不同格式写入项目指定目录，保持交付路径稳定。</p><div class="proof-visual"><div class="product-media"><video controls muted playsinline preload="metadata" poster="assets/product/real/poster-export-path.png"><source src="assets/product/real/export-path.webm" type="video/webm"></video></div><figure class="focus-detail"><img src="assets/product/real/focus-export-path.png" alt="导出路径配置局部放大" loading="lazy"><figcaption data-i18n="proof.focusLabel">关键区域放大 · 来自同一条真实录屏</figcaption></figure></div></article>
+        <article class="real-proof-card" data-real-proof><h3 data-i18n="feat.s7c1t">多语言整合</h3><p data-i18n="feat.s7c1d">中 / 英 / 日 / 韩四语，重复文本去重。</p><div class="proof-visual"><div class="product-media"><video controls muted playsinline preload="metadata" poster="assets/product/real/poster-multilang.png"><source src="assets/product/real/multilang.webm" type="video/webm"></video></div><figure class="focus-detail"><img src="assets/product/real/focus-multilang.png" alt="多语言整合结果局部放大" loading="lazy"><figcaption data-i18n="proof.focusLabel">关键区域放大 · 来自同一条真实录屏</figcaption></figure></div></article>
+        <article class="real-proof-card" data-real-proof><h3 data-i18n="proof.idTitle">批量生成 ID</h3><p data-i18n="proof.idDesc">按规则生成并回写连续 ID，真实结果直接留在表格中。</p><div class="proof-visual"><div class="product-media"><video controls muted playsinline preload="metadata" poster="assets/product/real/poster-id-generator.png"><source src="assets/product/real/id-generator.webm" type="video/webm"></video></div><figure class="focus-detail"><img src="assets/product/real/focus-id-generator.png" alt="ID 生成设置局部放大" loading="lazy"><figcaption data-i18n="proof.focusLabel">关键区域放大 · 来自同一条真实录屏</figcaption></figure></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section ai-home-section">
+    <div class="wrap">
+      <div class="feature-group-grid">
+        <div><div class="tag" data-i18n="feat.s1tag">AI 智能助手</div><h2 data-i18n="feat.s1h">本地或远程模型，按需选择</h2><p class="section-lead" data-i18n="feat.aiIntro">AI 是可选扩展，不改变原有导入、编辑、校验与导出流程。</p></div>
+        <div class="product-media"><video autoplay muted loop playsinline preload="metadata"><source src="assets/product/ai-worksheet.webm" type="video/webm"></video></div>
+      </div>
+      <div class="cards">
+        <a class="card" href="docs.html#ai-setup"><div class="ic">🤖</div><h3 data-i18n="feat.s1c1t">本地 AI 接入</h3><p data-i18n="feat.s1c1d">接入 Ollama / LM Studio / 远程接口，按平台插件化扩展，宿主零改动。</p><small class="mod-note" data-i18n="ai.modNote">需要安装 AI Mod</small></a>
+        <a class="card" href="docs.html#ai-setup"><div class="ic">🔒</div><h3 data-i18n="feat.s1c2t">隐私可控</h3><p data-i18n="feat.s1c2d">选择本地模型时数据留在本机；使用远程接口时由对应服务商处理请求。</p><small class="mod-note" data-i18n="ai.modNote">需要安装 AI Mod</small></a>
+        <a class="card" href="docs.html#ai-translate"><div class="ic">✍️</div><h3 data-i18n="feat.s1c3t">辅助填表与翻译</h3><p data-i18n="feat.s1c3d">AI 辅助批量填写、多语言翻译、内容生成，重复劳动交给它。</p><small class="mod-note" data-i18n="ai.modNote">需要安装 AI Mod</small></a>
       </div>
     </div>
   </section>

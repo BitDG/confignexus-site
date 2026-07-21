@@ -6,6 +6,7 @@
    篇目显示标题 = 对应语言 md key 的 basename；缺该语言时回退中文 basename 并挂"暂无翻译"提示条。 */
 window.DOC_CATS = {
   "cat-quickstart": { "zh": "快速开始", "en": "Quick Start", "ja": "クイックスタート", "ko": "빠른 시작" },
+  "cat-ai":     { "zh": "AI 专栏",     "en": "AI Guides",             "ja": "AI ガイド",     "ko": "AI 가이드" },
   "cat-table":  { "zh": "表格编辑体验", "en": "Table Editing Experience", "ja": "表編集体験", "ko": "표 편집 경험" },
   "cat-ct":     { "zh": "CT 列类型",   "en": "CT Column Types",          "ja": "CT列タイプ",   "ko": "CT 컬럼 유형" },
   "cat-valid":  { "zh": "数据验证",     "en": "Data Validation",          "ja": "データ検証",   "ko": "데이터 검증" },
@@ -16,6 +17,15 @@ window.DOC_CATS = {
 };
 window.DOC_MANIFEST = [
   { "id": "quick-first-lesson", "cat": "cat-quickstart", "dlc": false, "keys": { "zh": "快速开始/新手第一课", "en": "Quick Start/First Lesson", "ja": "クイックスタート/はじめてのレッスン", "ko": "빠른 시작/첫 수업" } },
+
+  { "id": "ai-setup",       "cat": "cat-ai", "dlc": false, "keys": { "zh": "AI专栏/AI安装与模型配置", "en": null, "ja": null, "ko": null } },
+  { "id": "ai-chat",        "cat": "cat-ai", "dlc": false, "keys": { "zh": "AI专栏/AI对话与表格生成", "en": null, "ja": null, "ko": null } },
+  { "id": "ai-translate",   "cat": "cat-ai", "dlc": false, "keys": { "zh": "AI专栏/AI翻译与文本处理", "en": null, "ja": null, "ko": null } },
+  { "id": "ai-worksheet",   "cat": "cat-ai", "dlc": false, "keys": { "zh": "AI专栏/自然语言操作工作表", "en": null, "ja": null, "ko": null } },
+  { "id": "ai-mcp",         "cat": "cat-ai", "dlc": false, "keys": { "zh": "AI专栏/让外部AI调用ConfigNexus", "en": null, "ja": null, "ko": null } },
+  { "id": "ai-python",      "cat": "cat-ai", "dlc": false, "keys": { "zh": "AI专栏/AI生成Python脚本", "en": null, "ja": null, "ko": null } },
+  { "id": "ai-richtext",    "cat": "cat-ai", "dlc": false, "keys": { "zh": "AI专栏/AI处理富文本", "en": null, "ja": null, "ko": null } },
+  { "id": "ai-component",   "cat": "cat-ai", "dlc": false, "keys": { "zh": "AI专栏/让AI开发创意工坊组件", "en": null, "ja": null, "ko": null } },
 
   { "id": "table-xlsx",    "cat": "cat-table",  "dlc": false, "keys": { "zh": "表格编辑体验/xlsx文件", "en": "Table Editing Experience/Xlsx File", "ja": "表編集体験/Xlsxファイル", "ko": "표 편집 경험/Xlsx 파일" } },
   { "id": "table-xls",     "cat": "cat-table",  "dlc": false, "keys": { "zh": "表格编辑体验/xls文件",  "en": "Table Editing Experience/Xls File",  "ja": "表編集体験/Xlsファイル",  "ko": "표 편집 경험/Xls 파일" } },
