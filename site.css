@@ -439,10 +439,10 @@ html[lang="ko"] body{--sans:'Noto Sans KR','Manrope',-apple-system,system-ui,san
 .media-pair{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 
 .proof-visual{position:relative;min-width:0;padding:0 48px 42px 0}
-.proof-visual>.product-media{position:relative;z-index:1;padding:8px;border-color:rgba(255,255,255,.12);border-radius:20px;
+.proof-visual>.product-media,.product-media.ai-demo{position:relative;z-index:1;padding:8px;border-color:rgba(255,255,255,.12);border-radius:20px;
   background:#11160f;box-shadow:0 28px 70px -36px rgba(12,22,10,.72)}
-.proof-visual>.product-media video{border-radius:12px;background:#11160f}
-.proof-visual .media-caption{padding:10px 8px 3px;color:rgba(255,255,255,.62);background:#11160f}
+.proof-visual>.product-media video,.product-media.ai-demo video{border-radius:12px;background:#11160f}
+.proof-visual .media-caption,.product-media.ai-demo .media-caption{padding:10px 8px 3px;color:rgba(255,255,255,.62);background:#11160f}
 .focus-detail{position:absolute;right:0;bottom:0;z-index:2;width:48%;overflow:hidden;margin:0;
   border:1px solid rgba(255,255,255,.46);border-radius:12px;background:#11160f;box-shadow:0 22px 54px -22px rgba(7,15,6,.78)}
 .focus-detail img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}

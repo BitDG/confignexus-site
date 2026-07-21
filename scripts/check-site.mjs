@@ -42,7 +42,8 @@ expect(download.includes('class="itch-fallback"'), 'download.html: 缺少弱化�
 
 const css = read('site.css');
 expect(/\.real-proof-card\{[^}]*background:transparent/s.test(css), 'site.css: 实录分镜外层仍是实体卡片');
-expect(/\.proof-visual>\.product-media\{[^}]*background:#11160f/s.test(css), 'site.css: 实录视频缺少深色影院画布');
+expect(/\.proof-visual>\.product-media[^{]*\{[^}]*background:#11160f/s.test(css), 'site.css: 实录视频缺少深色影院画布');
+expect(/\.product-media\.ai-demo[^{]*\{[^}]*background:#11160f/s.test(css), 'site.css: 首页底部 AI 演示未使用影院画布');
 expect(/\.focus-detail\{[^}]*border:1px/s.test(css), 'site.css: 局部放大仍在使用厚重边框');
 
 const referencedAssets = new Set();
