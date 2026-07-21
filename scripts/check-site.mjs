@@ -27,6 +27,7 @@ expect(!home.includes('product-preview'), 'index.html: 仍在使用手绘产品�
 expect((home.match(/data-real-proof/g) || []).length === 4, 'index.html: 首页应有 4 条真实工作流证明');
 
 const features = htmlByPage['features.html'];
+expect(features.includes('<body class="features-page">'), 'features.html: 功能页仍在使用全站旧卡片样式');
 for (const id of ['core-workflow', 'engineering', 'extensions']) {
   expect(features.includes(`id="${id}"`), `features.html: 缺少 #${id} 功能分组`);
 }
@@ -41,6 +42,8 @@ expect(download.includes('class="btn btn-primary" href="https://store.steampower
 expect(download.includes('class="itch-fallback"'), 'download.html: 缺少弱化的 itch.io 备用入口');
 
 const css = read('site.css');
+expect(/\.features-page \.card\{[^}]*background:transparent/s.test(css), 'site.css: 功能入口仍是旧白卡包装');
+expect(/\.features-page \.feature-group-grid\{[^}]*background:transparent/s.test(css), 'site.css: 功能分组仍是旧白卡包装');
 expect(/\.real-proof-card\{[^}]*background:transparent/s.test(css), 'site.css: 实录分镜外层仍是实体卡片');
 expect(/\.proof-visual>\.product-media[^{]*\{[^}]*background:#11160f/s.test(css), 'site.css: 实录视频缺少深色影院画布');
 expect(/\.product-media\.ai-demo[^{]*\{[^}]*background:#11160f/s.test(css), 'site.css: 首页底部 AI 演示未使用影院画布');
@@ -70,6 +73,9 @@ for (const key of ['nav.menu', 'idx.proofImport', 'idx.workflowH', 'feat.groupCo
   const count = i18n.split(`'${key}'`).length - 1;
   expect(count === 4, `i18n.js: ${key} 应在四种语言中各出现一次，当前 ${count} 次`);
 }
+
+const docsManifest = read('docs-manifest.js');
+expect(!/"(?:en|ja|ko)": null/.test(docsManifest), 'docs-manifest.js: 仍有教程缺少英 / 日 / 韩版本');
 
 if (failures.length) {
   console.error(`站点检查失败（${failures.length} 项）:`);

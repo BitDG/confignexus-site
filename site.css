@@ -472,6 +472,18 @@ html[lang="ko"] body{--sans:'Noto Sans KR','Manrope',-apple-system,system-ui,san
 .feature-group-grid p{color:var(--ink-dim);line-height:1.75}
 .ai-home-section .feature-group-grid{margin-bottom:24px}
 
+.features-page .feature-group-grid{padding:42px 0;border:0;border-top:1px solid rgba(38,65,31,.14);border-radius:0;background:transparent;box-shadow:none}
+.features-page .feature-group-grid>.product-media{padding:8px;border-color:rgba(255,255,255,.12);background:#11160f;box-shadow:0 28px 70px -36px rgba(12,22,10,.72)}
+.features-page .feature-group-grid>.product-media video,.features-page .feature-group-grid>.product-media img{border-radius:12px;background:#11160f}
+.features-page .cards{gap:0 28px;border-top:1px solid rgba(38,65,31,.14)}
+.features-page .card{min-height:210px;padding:30px 18px 30px 0;border:0;border-bottom:1px solid rgba(38,65,31,.14);border-radius:0;background:transparent;box-shadow:none;-webkit-backdrop-filter:none;backdrop-filter:none;transition:background .2s,color .2s}
+.features-page .card:only-child{grid-column:1/-1;min-height:0}
+.features-page .card:hover{transform:none;background:linear-gradient(110deg,rgba(94,156,65,.08),transparent 72%);box-shadow:none}
+.features-page .card::after{display:none}
+.features-page .card .ic{display:block;width:auto;height:auto;margin-bottom:20px;color:var(--acc-deep);background:none;box-shadow:none;font-size:24px}
+.features-page .card h3{font-family:var(--disp);font-size:20px}
+.features-page .card p{max-width:34em}
+
 .dl-card{max-width:860px}
 .download-choices{display:grid;grid-template-columns:minmax(0,680px);justify-content:center;gap:16px;margin-top:24px;text-align:left}
 .download-choice{display:flex;flex-direction:column;align-items:flex-start;padding:22px;border:1px solid var(--hair);border-radius:16px;background:rgba(255,255,255,.76)}
@@ -508,6 +520,8 @@ html[lang="ko"] body{--sans:'Noto Sans KR','Manrope',-apple-system,system-ui,san
   .real-proof-card:nth-child(even)>h3,.real-proof-card:nth-child(even)>p,.real-proof-card:nth-child(even)>.proof-visual{grid-column:1;grid-row:auto}
   .real-proof-card>.proof-visual{margin-top:10px}
   .feature-group-grid{padding:22px}
+  .features-page .feature-group-grid{padding:28px 0}
+  .features-page .card{min-height:0;padding:24px 10px 26px 0}
   .feature-jump{padding:0 14px}
   .section{padding:64px 0}
   .pagehead{padding-top:76px}

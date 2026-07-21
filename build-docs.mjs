@@ -56,7 +56,7 @@ try {
   for (const item of manifest) {
     for (const lang of LANGS) {
       const k = item.keys[lang];
-      if (k == null) continue;
+      if (k == null) { err('manifest 条目缺少翻译：' + lang + ' / id=' + item.id); continue; }
       referenced[lang].add(k);
       // 硬错误：manifest 引用了不存在的 md
       if (!(k in DOCS[lang])) err('manifest 引用了不存在的文件：' + lang + ' / ' + k + '（id=' + item.id + '）');

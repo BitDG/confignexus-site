@@ -1,5 +1,5 @@
 /* ConfigNexus 官网文档清单（手建，唯一真源）。
-   稳定 ID 决定侧栏顺序与深链；每条记录该篇目在四种语言里的真实 md key（无翻译则 null）。
+   稳定 ID 决定侧栏顺序与深链；每条记录该篇目在四种语言里的真实 md key。
    分类归属以中文版为准（其它语言把部分篇目放在不同分类，这里统一按中文结构呈现）。
    build-docs.mjs 会读取本文件做一致性校验（manifest 引用的文件必须存在；磁盘上的文件必须被引用）。
    旧的中文 hash 深链通过 docs.js 里的别名表（zh key -> 稳定 ID）继续可用。
@@ -18,14 +18,14 @@ window.DOC_CATS = {
 window.DOC_MANIFEST = [
   { "id": "quick-first-lesson", "cat": "cat-quickstart", "dlc": false, "keys": { "zh": "快速开始/新手第一课", "en": "Quick Start/First Lesson", "ja": "クイックスタート/はじめてのレッスン", "ko": "빠른 시작/첫 수업" } },
 
-  { "id": "ai-setup",       "cat": "cat-ai", "dlc": false, "keys": { "zh": "AI专栏/AI安装与模型配置", "en": null, "ja": null, "ko": null } },
-  { "id": "ai-chat",        "cat": "cat-ai", "dlc": false, "keys": { "zh": "AI专栏/AI对话与表格生成", "en": null, "ja": null, "ko": null } },
-  { "id": "ai-translate",   "cat": "cat-ai", "dlc": false, "keys": { "zh": "AI专栏/AI翻译与文本处理", "en": null, "ja": null, "ko": null } },
-  { "id": "ai-worksheet",   "cat": "cat-ai", "dlc": false, "keys": { "zh": "AI专栏/自然语言操作工作表", "en": null, "ja": null, "ko": null } },
-  { "id": "ai-mcp",         "cat": "cat-ai", "dlc": false, "keys": { "zh": "AI专栏/让外部AI调用ConfigNexus", "en": null, "ja": null, "ko": null } },
-  { "id": "ai-python",      "cat": "cat-ai", "dlc": false, "keys": { "zh": "AI专栏/AI生成Python脚本", "en": null, "ja": null, "ko": null } },
-  { "id": "ai-richtext",    "cat": "cat-ai", "dlc": false, "keys": { "zh": "AI专栏/AI处理富文本", "en": null, "ja": null, "ko": null } },
-  { "id": "ai-component",   "cat": "cat-ai", "dlc": false, "keys": { "zh": "AI专栏/让AI开发创意工坊组件", "en": null, "ja": null, "ko": null } },
+  { "id": "ai-setup",       "cat": "cat-ai", "dlc": false, "keys": { "zh": "AI专栏/AI安装与模型配置", "en": "AI Guides/AI Setup and Model Configuration", "ja": "AI ガイド/AIのインストールとモデル設定", "ko": "AI 가이드/AI 설치 및 모델 설정" } },
+  { "id": "ai-chat",        "cat": "cat-ai", "dlc": false, "keys": { "zh": "AI专栏/AI对话与表格生成", "en": "AI Guides/AI Chat and Table Generation", "ja": "AI ガイド/AIチャットとテーブル生成", "ko": "AI 가이드/AI 채팅 및 테이블 생성" } },
+  { "id": "ai-translate",   "cat": "cat-ai", "dlc": false, "keys": { "zh": "AI专栏/AI翻译与文本处理", "en": "AI Guides/AI Translation and Text Processing", "ja": "AI ガイド/AI翻訳とテキスト処理", "ko": "AI 가이드/AI 번역 및 텍스트 처리" } },
+  { "id": "ai-worksheet",   "cat": "cat-ai", "dlc": false, "keys": { "zh": "AI专栏/自然语言操作工作表", "en": "AI Guides/Operate Worksheets with Natural Language", "ja": "AI ガイド/自然言語でワークシートを操作", "ko": "AI 가이드/자연어로 워크시트 작업" } },
+  { "id": "ai-mcp",         "cat": "cat-ai", "dlc": false, "keys": { "zh": "AI专栏/让外部AI调用ConfigNexus", "en": "AI Guides/Connect External AI to ConfigNexus", "ja": "AI ガイド/外部AIからConfigNexusを操作", "ko": "AI 가이드/외부 AI에서 ConfigNexus 호출" } },
+  { "id": "ai-python",      "cat": "cat-ai", "dlc": false, "keys": { "zh": "AI专栏/AI生成Python脚本", "en": "AI Guides/Generate Python Scripts with AI", "ja": "AI ガイド/AIでPythonスクリプトを生成", "ko": "AI 가이드/AI로 Python 스크립트 생성" } },
+  { "id": "ai-richtext",    "cat": "cat-ai", "dlc": false, "keys": { "zh": "AI专栏/AI处理富文本", "en": "AI Guides/Process Rich Text with AI", "ja": "AI ガイド/AIでリッチテキストを処理", "ko": "AI 가이드/AI로 리치 텍스트 처리" } },
+  { "id": "ai-component",   "cat": "cat-ai", "dlc": false, "keys": { "zh": "AI专栏/让AI开发创意工坊组件", "en": "AI Guides/Build Workshop Components with AI", "ja": "AI ガイド/AIでワークショップコンポーネントを開発", "ko": "AI 가이드/AI로 워크샵 컴포넌트 개발" } },
 
   { "id": "table-xlsx",    "cat": "cat-table",  "dlc": false, "keys": { "zh": "表格编辑体验/xlsx文件", "en": "Table Editing Experience/Xlsx File", "ja": "表編集体験/Xlsxファイル", "ko": "표 편집 경험/Xlsx 파일" } },
   { "id": "table-xls",     "cat": "cat-table",  "dlc": false, "keys": { "zh": "表格编辑体验/xls文件",  "en": "Table Editing Experience/Xls File",  "ja": "表編集体験/Xlsファイル",  "ko": "표 편집 경험/Xls 파일" } },
@@ -33,7 +33,7 @@ window.DOC_MANIFEST = [
   { "id": "table-csv",     "cat": "cat-table",  "dlc": false, "keys": { "zh": "表格编辑体验/csv文件",  "en": "Table Editing Experience/CSV File",  "ja": "表編集体験/CSVファイル",  "ko": "표 편집 경험/CSV 파일" } },
   { "id": "table-cnx",     "cat": "cat-table",  "dlc": false, "keys": { "zh": "表格编辑体验/cnx工程文件", "en": "Table Editing Experience/cnx Project File", "ja": "表編集体験/cnxプロジェクトファイル", "ko": "표 편집 경험/cnx 프로젝트 파일" } },
   { "id": "table-multitab","cat": "cat-table",  "dlc": false, "keys": { "zh": "表格编辑体验/多页签管理", "en": "Table Editing Experience/Multi-tab Management", "ja": "表編集体験/マルチタブ管理", "ko": "표 편집 경험/멀티 탭 관리" } },
-  { "id": "ct-overview",  "cat": "cat-ct",     "dlc": false, "keys": { "zh": "CT列类型/CT系统总览", "en": "CT Column Types/CT System Overview", "ja": null, "ko": null } },
+  { "id": "ct-overview",  "cat": "cat-ct",     "dlc": false, "keys": { "zh": "CT列类型/CT系统总览", "en": "CT Column Types/CT System Overview", "ja": "CT列タイプ/CTシステム概要", "ko": "CT 컬럼 유형/CT 시스템 개요" } },
 
 
 
