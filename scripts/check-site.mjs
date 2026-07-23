@@ -51,6 +51,10 @@ expect(download.includes('class="download-choice recommended steam-download-choi
 expect(download.includes('class="btn btn-primary" href="https://store.steampowered.com/app/4400360/ConfigNexus___AI/"'), 'download.html: 主按钮未指向当前 Steam 商店页');
 expect(download.includes('class="itch-fallback"'), 'download.html: 缺少弱化的 itch.io 备用入口');
 
+const workshop = htmlByPage['workshop.html'];
+expect(workshop.includes('src="assets/product/talent-coordinate-promo.mp4"'), 'workshop.html: 缺少天赋坐标宣传视频');
+expect(workshop.includes('poster="assets/product/talent-coordinate-poster.png"'), 'workshop.html: 天赋坐标视频缺少宣传封面');
+
 const css = read('site.css');
 expect(/\.features-page \.card\{[^}]*background:transparent/s.test(css), 'site.css: 功能入口仍是旧白卡包装');
 expect(/\.features-page \.feature-group-grid\{[^}]*background:transparent/s.test(css), 'site.css: 功能分组仍是旧白卡包装');
@@ -93,7 +97,7 @@ for (const asset of [...referencedAssets].filter((name) => name.includes('/focus
 }
 
 const i18n = read('i18n.js');
-for (const key of ['nav.menu', 'idx.proofImport', 'idx.workflowH', 'feat.groupCore', 'proof.realTitle', 'proof.focusLabel', 'dl.itchFallback']) {
+for (const key of ['nav.menu', 'idx.proofImport', 'idx.workflowH', 'feat.groupCore', 'proof.realTitle', 'proof.focusLabel', 'dl.itchFallback', 'ws.videoTag', 'ws.videoH', 'ws.videoTitle', 'ws.videoDesc']) {
   const count = i18n.split(`'${key}'`).length - 1;
   expect(count === 4, `i18n.js: ${key} 应在四种语言中各出现一次，当前 ${count} 次`);
 }

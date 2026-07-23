@@ -21,6 +21,8 @@ if (!promoRoot) {
 const assets = [
   ['covers/campaign/01-main-promo-16x9-1080p.png', 'campaign-poster.png'],
   ['output/confignexus-promo-zh.mp4', 'overview-zh.mp4'],
+  ['output/talent-coordinate-promo.mp4', 'talent-coordinate-promo.mp4'],
+  ['covers/features/19-talent-coordinate-editor-16x9-1080p.png', 'talent-coordinate-poster.png'],
   ['output/feature-videos/06-multi-format-import.mp4', 'multi-format-import.mp4'],
   ['output/feature-videos/01-data-validation.mp4', 'data-validation.mp4'],
   ['output/feature-videos/03-json-editor.mp4', 'json-editor.mp4'],
