@@ -19,9 +19,19 @@ const htmlByPage = Object.fromEntries(pages.map((page) => [page, read(page)]));
 for (const [page, html] of Object.entries(htmlByPage)) {
   expect(html.includes('class="mobile-menu"'), `${page}: 缺少原生移动菜单`);
   expect(html.includes('data-i18n="nav.menu"'), `${page}: 移动菜单缺少多语言标签`);
+  expect(html.includes('site.css?v=20260723-canvas'), `${page}: site.css 未更新到聚光画布版本`);
+}
+
+for (const page of ['index.html', 'features.html', 'download.html', 'workshop.html']) {
+  expect(htmlByPage[page].includes('site.js?v=20260723-motion'), `${page}: site.js 未更新到当前动效版本`);
 }
 
 const home = htmlByPage['index.html'];
+expect((home.match(/class="atmosphere-canvas"/g) || []).length === 1, 'index.html: 首页应只有一个聚光画布容器');
+const atmosphere = home.match(/<div class="atmosphere-canvas">([\s\S]*?)<\/div>\s*<\/main>/)?.[1] || '';
+for (const marker of ['id="workflow"', 'id="advanced"', 'ai-home-section', 'ecosystem-section', 'endwrap']) {
+  expect(atmosphere.includes(marker), `index.html: 聚光画布应包含 ${marker}`);
+}
 expect(home.includes('data-product-demo'), 'index.html: 缺少真实产品演示媒体');
 expect(!home.includes('product-preview'), 'index.html: 仍在使用手绘产品界面');
 expect((home.match(/data-real-proof/g) || []).length === 4, 'index.html: 首页应有 4 条真实工作流证明');
@@ -48,6 +58,20 @@ expect(/\.real-proof-card\{[^}]*background:transparent/s.test(css), 'site.css: �
 expect(/\.proof-visual>\.product-media[^{]*\{[^}]*background:#11160f/s.test(css), 'site.css: 实录视频缺少深色影院画布');
 expect(/\.product-media\.ai-demo[^{]*\{[^}]*background:#11160f/s.test(css), 'site.css: 首页底部 AI 演示未使用影院画布');
 expect(/\.focus-detail\{[^}]*border:1px/s.test(css), 'site.css: 局部放大仍在使用厚重边框');
+expect(!css.includes('transition:all'), 'site.css: 仍有 transition: all，可能误动画布局属性');
+expect(/@media\(hover:hover\) and \(pointer:fine\)/.test(css), 'site.css: 鼠标悬停动效未限制为精细指针设备');
+expect(/\.atmosphere-canvas\{[^}]*radial-gradient/s.test(css), 'site.css: 缺少聚光画布渐变背景');
+expect(/\.atmosphere-canvas::before\{[^}]*radial-gradient/s.test(css), 'site.css: 缺少聚光画布细点纹理');
+expect(/\.ecosystem-section \.product-media\{[^}]*background:#11160f/s.test(css), 'site.css: 生态截图缺少深色媒体舞台');
+expect(!/#advanced,.ecosystem-section\{[^}]*border-block/s.test(css), 'site.css: 不应保留高级功能与生态区的横向分割带');
+expect(!/\.endcta::before\{[^}]*linear-gradient\(var\(--grid\)/s.test(css), 'site.css: 后半页 CTA 不应继续使用网格');
+
+const siteJs = read('site.js');
+expect(siteJs.includes('IntersectionObserver'), 'site.js: 缺少进入视口观察');
+expect(siteJs.includes("prefers-reduced-motion: reduce"), 'site.js: 缺少减少动效判断');
+expect(/querySelectorAll\(['"]video\[autoplay\]['"]\)/.test(siteJs), 'site.js: 自动循环视频未按可见性管理');
+expect(/\.target\.play\(\)/.test(siteJs) && /\.target\.pause\(\)/.test(siteJs), 'site.js: 自动循环视频缺少播放 / 暂停配对');
+expect(/else if \(!reduceMotion\)[\s\S]*\.play\(\)/.test(siteJs), 'site.js: 不支持进入视口观察时，自动循环视频缺少播放回退');
 
 const referencedAssets = new Set();
 for (const html of Object.values(htmlByPage)) {
